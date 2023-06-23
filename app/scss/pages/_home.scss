@@ -1,0 +1,177 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+.hero{
+    background-image: url("../../../app/assets/img/intro-background-xs-min.webp");
+    @include background-cover;
+    height: rem(1080);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    z-index: 1;
+
+    &::after{
+        content:"";
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        background-color:$clr-primary;
+        opacity: 0.88;
+        z-index: -1;
+    }
+
+    &__heading{
+        font-family: 'Poppins extra-bold';
+        padding-inline: rem(20);
+    }
+}
+
+.counters{
+    padding: 100px 0px 100px;
+    background-color: $clr-primary;
+
+    @include breakpoint-md{
+        padding: 160px 0px 160px;
+    }
+    @include breakpoint-lg{
+        padding: 220px 150px 219px;
+    }
+
+    &__num{
+        font-size: rem(56);
+        font-size: clamp(3rem, 6vw + 1rem, 5rem);
+        color:$clr-white;
+
+        // @include breakpoint-md{
+        //     font-size: rem(72);
+        // }
+        // @include breakpoint-lg{
+        //     font-size: rem(84);
+        // }
+    }
+}
+
+.rectangle-bg{
+    background-image:url("../../../app/assets/img/rectangle-bg.webp");
+    background-repeat: no-repeat;
+    @include breakpoint-lg{
+        background-position:180%;
+        padding: 80px 0px 250px 0px;
+        margin-top: rem(190);
+    }
+}
+.rectangle-bg--left{
+    background-image:url("../../../app/assets/img/rectangle-bg.webp");
+    background-repeat: no-repeat;
+    padding: 80px 0px 80px 0px;
+
+    @include breakpoint-lg{
+        background-position:-80%;
+        padding: 80px 0px 200px 0px;
+        margin-top: rem(140);
+    }
+}
+
+.brands{
+    position: relative;
+
+    &__container{
+        padding-block: 100px 120px;
+        background-color: $clr-athens-gray;
+
+        @include breakpoint-sm{
+            padding-block: 150px 180px;
+        }
+        @include breakpoint-md{
+            padding-block: 250px 280px;
+        }
+        @include breakpoint-lg{
+            padding-block: 325px 450px;
+        }
+    }
+
+    &__logo-2{
+        width: 285px;
+    }
+    &__logo-3{
+        width: 224.7px;
+    }
+}
+
+.sustainable{
+    position: relative;
+    // margin-top: -300px;
+
+    // @include breakpoint-sm{
+    //     margin-top: -400px;
+    // }
+    // @include breakpoint-md{
+    //     margin-top: -500px;
+    // }
+
+    &__figure{
+            position: relative;
+        img{
+            height: rem(360);
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            inset:0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../../../app/assets/img/canterbury-bg.svg");
+            @include background-cover;
+        }
+    }
+
+    &__figcaption{
+        position: absolute;
+        bottom: 0;
+        top: 270px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-inline: 40px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+.testimonial{
+
+    &__thumbnail{
+        background-image: url("../../../app/assets/img/clip-img/Path-3.svg");
+        background-repeat: no-repeat;
+        background-position: 90% 2%;
+
+        @include breakpoint-sm{
+            background-position: 60% 2%;
+        }
+    }
+}
+
+.awards{
+  background-color: $clr-athens-gray;
+}
+.add-value{
+    // padding-block: rem(307);
+    background-color: $clr-secondary;
+    margin-top: rem(100);
+
+    @include breakpoint-sm{
+        margin-top: rem(150);
+    }
+    @include breakpoint-md{
+        margin-top: rem(200);
+    }
+    @include breakpoint-lg{
+        margin-top: rem(300);
+    }
+}

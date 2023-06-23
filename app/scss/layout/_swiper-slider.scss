@@ -1,0 +1,20 @@
+@use "../abstract/colors" as *;
+@use "../abstract/functions" as *;
+
+.swiper-pagination{
+    position:static !important;
+    margin-top: rem(72);
+}
+
+.swiper-pagination-bullet{
+    height: rem(17) !important;
+    width: rem(17) !important;
+    border-radius: 0 !important;
+    background:transparent !important;
+    border:1px solid $clr-secondary!important;
+}
+.swiper-pagination-bullet-active{
+    height: rem(20) !important;
+    width: rem(20) !important;
+    background-color:$clr-secondary !important;
+}

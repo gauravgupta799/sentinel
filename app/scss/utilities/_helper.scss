@@ -1,0 +1,99 @@
+@use '../abstract/colors' as *;
+@use '../abstract/breakpoints' as *; 
+@use '../abstract/functions' as *;
+
+.img-fluid{
+    width:100%;
+    height:auto;
+}
+
+p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
+    margin-top:1rem;
+}
+.text-center{
+    text-align:center;
+}
+.text-left{
+    text-align:left
+}
+.text-white{
+    color:$clr-white !important;
+}
+
+.text-uppercase{
+    text-transform:uppercase;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.text-lowercase{
+    text-transform: lowercase;
+}
+.text-underline{
+  text-decoration: underline;   
+}
+.relative{
+    position: relative;
+}
+.underline{
+    text-decoration-thickness: 6px;  
+    text-decoration: underline;
+}
+.u-white{
+    text-decoration-color: $clr-white;
+}
+.u-blue{
+    text-decoration-color: $clr-secondary;
+}
+
+.bg--primary{
+    background-color: $clr-primary;
+}
+.bg--secondary{
+    background-color: $clr-secondary;
+}
+
+// .secondary--para{
+//     line-height: 1.57;
+//     font-size: rem(20) !important;
+
+//     @include breakpoint-md{
+//         font-size: rem(24) !important;
+//     }
+//     @include breakpoint-lg{
+//         font-size: rem(28) !important;
+//     }
+// }
+
+// .section-header{
+//     max-width:rem(650);
+//     margin:0 auto;
+// }
+
+// .section-heading p{
+//     max-width:rem(500);
+//     margin-inline:auto;
+// }
+
+.overflow-hidden{
+    overflow:hidden;
+}
+
+.img-cover{
+    width:100%;
+    object-fit:cover;
+}
+
+.h--100{
+    height: 100%;
+}
+
+.fw--5{
+    font-weight: 500;
+}
+.fw--600{
+    font-weight: 600;
+}
+.fw--bold{
+    font-weight: bold !important;
+}
