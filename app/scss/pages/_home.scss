@@ -8,10 +8,8 @@
     @include background-cover;
     height: rem(1080);
     position: relative;
-    display: flex;
+    @include flex-center;
     flex-direction: column;
-    justify-content:center;
-    align-items: center;
     z-index: 1;
 
     &::after{
@@ -23,7 +21,6 @@
         opacity: 0.88;
         z-index: -1;
     }
-
     &__heading{
         font-family: 'Poppins extra-bold';
         padding-inline: rem(20);
@@ -33,6 +30,7 @@
 .counters{
     padding: 100px 0px 100px;
     background-color: $clr-primary;
+    position: relative;
 
     @include breakpoint-md{
         padding: 160px 0px 160px;
@@ -40,30 +38,55 @@
     @include breakpoint-lg{
         padding: 220px 150px 219px;
     }
-
     &__num{
-        font-size: rem(56);
         font-size: clamp(3rem, 6vw + 1rem, 5rem);
         color:$clr-white;
-
-        // @include breakpoint-md{
-        //     font-size: rem(72);
-        // }
-        // @include breakpoint-lg{
-        //     font-size: rem(84);
-        // }
     }
+    &::before{
+        content:url("../../../app/assets/img/clip-img/Path-1.svg");
+        position: absolute;
+        bottom: -80px;
+        z-index: -1;
+        left: 6%;
+    }
+    
 }
 
 .rectangle-bg{
     background-image:url("../../../app/assets/img/rectangle-bg.webp");
     background-repeat: no-repeat;
+    position: relative;
+
     @include breakpoint-lg{
         background-position:180%;
-        padding: 80px 0px 250px 0px;
-        margin-top: rem(190);
+        padding-top: rem(80);
     }
+
+    &::before{
+        content:url("../../../app/assets/img/clip-img/Path-3.svg");
+        position: absolute;
+        right: 0;
+        top: -50px;
+        z-index: -1;
+    }
+
+    
 }
+
+// .blob-1{
+//     position: absolute;
+//     top: -60px;
+//     right: 16px;
+//     z-index: -1;
+// }
+
+.blob-2{
+    position: absolute;
+    bottom: 190px;
+    left: 50px;
+    z-index: -1;
+}
+
 .rectangle-bg--left{
     background-image:url("../../../app/assets/img/rectangle-bg.webp");
     background-repeat: no-repeat;
@@ -93,32 +116,22 @@
             padding-block: 325px 450px;
         }
     }
-
     &__logo-2{
-        width: 285px;
+        width: rem(258);
     }
     &__logo-3{
-        width: 224.7px;
+        width: rem(225);
     }
 }
 
 .sustainable{
     position: relative;
-    // margin-top: -300px;
-
-    // @include breakpoint-sm{
-    //     margin-top: -400px;
-    // }
-    // @include breakpoint-md{
-    //     margin-top: -500px;
-    // }
 
     &__figure{
-            position: relative;
+        position: relative;
         img{
             height: rem(360);
         }
-
         &::after{
             content: "";
             position: absolute;
@@ -137,33 +150,55 @@
         display: inline-flex;
         align-items: center;
         justify-content: space-between;
-        padding-inline: 40px;
+        padding-inline: 20px;
         left: 0;
         width: 100%;
         z-index: 1;
+        @include breakpoint-md{
+            padding-inline: 40px;
+        }
     }
 }
 
 .testimonial{
+    &__slide-wrapper{
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
 
-    &__thumbnail{
-        background-image: url("../../../app/assets/img/clip-img/Path-3.svg");
-        background-repeat: no-repeat;
-        background-position: 90% 2%;
-
-        @include breakpoint-sm{
-            background-position: 60% 2%;
+        &::before{
+            content: url("../../../app/assets/img/clip-img/Path-3.svg");
+            position: absolute;
+            z-index: -1;
+            // top: -30px;
+            // right: 280px;
+            right: 500px;
+            top: 90px;
         }
     }
 }
 
 .awards{
   background-color: $clr-athens-gray;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  &::before{
+        content:url("../../../app/assets/img/clip-img/Path-9.svg");
+        position: absolute;
+        top: 44%;
+        left: 56%;
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
 }
+
 .add-value{
-    // padding-block: rem(307);
     background-color: $clr-secondary;
     margin-top: rem(100);
+    position: relative;
+    overflow: hidden;
 
     @include breakpoint-sm{
         margin-top: rem(150);
@@ -173,5 +208,39 @@
     }
     @include breakpoint-lg{
         margin-top: rem(300);
+    }
+
+    &::before, &::after{
+        position: absolute;
+        opacity: 0.19;
+    }
+
+    &::before{
+        content:url("../../../app/assets/img/clip-img/Path-6.svg");
+        left: rem(-230);
+        top: rem(145);
+        bottom: rem(189);
+    }
+
+    &::after{
+        content:url("../../../app/assets/img/clip-img/Path-7.svg");
+        right: 0;
+        bottom: rem(40);
+        right: rem(-160);
+    }
+}
+
+.arrow-forward-wrapper{
+    svg{
+        transition:all 0.4s ease-in;
+        &:hover{
+            cursor: pointer;
+            transform:translateX(6px);
+
+            path{
+                transition:all 0.4s ease-in;
+                fill:$clr-secondary;
+            }
+        }
     }
 }

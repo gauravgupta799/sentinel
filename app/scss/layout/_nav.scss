@@ -20,9 +20,39 @@
     &__item{
         font-size: rem(16);
         font-weight: bold;
+        position: relative;
+
+        &::after{
+            content: " ";
+            position: absolute;
+            bottom:0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: $clr-secondary;
+            transition:all 0.5s ease-in-out;
+            transform:scaleX(0);
+            transform-origin: left;
+        }
+
+        &:hover{
+
+            &::after{
+                transform:scaleX(1);
+            }
+        }
+
+        &.active{
+            border-bottom:5px solid $clr-secondary;
+        }
+    }
+
+    &__link{
+        transition:all 0.4s ease-in-out;
+
+        &:hover{
+            color:$clr-secondary;
+        }
     }
 }
 
-.active{
-    border-bottom:8px solid $clr-secondary;
-}

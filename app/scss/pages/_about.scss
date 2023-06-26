@@ -1,0 +1,39 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+.hero--about{
+    height: 817px;
+}
+
+.about--heading{
+    font-family: 'Poppins extra-bold';
+}
+
+.consultation{
+    padding: 200px 0px 200px;
+    background-color: $clr-primary;
+    position: relative;
+
+    &::before{
+        content:url("../../../app/assets/img/clip-img/Path-1.svg");
+        position: absolute;
+        top: -60px;
+        transform: rotate(90deg);
+        right: 16px;
+        z-index: -1;
+    }
+}
+
+.revolution{
+    padding: 296px 0px 200px;
+    background-color: $clr-card;
+}
+
+.stepper__wrapper{
+    width: rem(280);
+    padding: 50px 20px 50px 50px;
+    background-color: $clr-white;
+}

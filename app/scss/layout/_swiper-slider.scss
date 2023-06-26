@@ -3,7 +3,13 @@
 
 .swiper-pagination{
     position:static !important;
-    margin-top: rem(72);
+}
+
+.swiper-pagination--hero{
+    margin-top: rem(133) !important;
+}
+.swiper-pagination--testimonial{
+    margin-top: rem(72) !important;
 }
 
 .swiper-pagination-bullet{

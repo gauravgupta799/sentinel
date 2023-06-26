@@ -8,20 +8,24 @@
 
     &__top{
         background-color: $clr-primary;
-        padding-block: 64px;
+        padding-block: rem(64);
 
         @include breakpoint-sm{
-            padding-block: 100px;
+            padding-block: rem(100);
         }
         @include breakpoint-md{
-            padding-block: 120px 197px;
+            padding-block: rem(120) rem(197);
         }
         @include breakpoint-lg{
-            padding-block: 154px 227px;
+            padding-block: rem(154) rem(227);
         }
     }
+
+    &__logo{
+        height: rem(60);
+    }
     &__bottom{
-        padding-block: 32px 25px;
+        padding-block: rem(32) rem(25);
     }
 
     &__grid{
@@ -29,11 +33,44 @@
         grid-gap:1rem;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    &__logo--wrapper{
-        // margin-right: rem(270);
-    }
 
+    &__list{
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(16);
+    }
+    &__list-title{
+        font-size: rem(18);
+        line-height: 2;
+        font-weight: 500;
+
+        @include breakpoint-md{
+            font-size: rem(20);
+        }
+        @include breakpoint-md{
+            font-size: rem(24);
+        }
+    }
+  
     &__item{
         font-weight: 300 !important;
+    }
+    
+    &__link{
+        transition:all 0.4s ease-in-out;
+
+        &:hover{
+            color:$clr-secondary;
+        }
+
+        svg{
+            path{
+                transition:all 0.4s ease-in-out;
+
+            &:hover{
+                fill:$clr-secondary;
+            }
+            }
+        }
     }
 }

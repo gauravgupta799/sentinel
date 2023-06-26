@@ -53,6 +53,10 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
     background-color: $clr-secondary;
 }
 
+.z--2{
+    z-index: 2;
+}
+
 // .secondary--para{
 //     line-height: 1.57;
 //     font-size: rem(20) !important;
@@ -96,4 +100,11 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 }
 .fw--bold{
     font-weight: bold !important;
+}
+
+.seperator-line{
+    // width: 1640px;
+    height: 1px;
+    margin: 207.5px 140px 189.5px;
+    background-color: #c1c1c1;
 }
