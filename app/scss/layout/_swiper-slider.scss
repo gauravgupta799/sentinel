@@ -24,3 +24,13 @@
     width: rem(20) !important;
     background-color:$clr-secondary !important;
 }
+
+.swiper-pagination--hero .swiper-pagination-bullet{
+    width: rem(16) !important;
+    height: rem(16) !important;
+    background-color: $clr-white !important;
+}
+
+.swiper-pagination--hero .swiper-pagination-bullet-active{
+    background-color:$clr-secondary !important;
+}

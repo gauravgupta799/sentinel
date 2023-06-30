@@ -45,6 +45,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 .u-blue{
     text-decoration-color: $clr-secondary;
 }
+.u-offset{
+    text-underline-offset: 12px;
+}
 
 .bg--primary{
     background-color: $clr-primary;
@@ -103,8 +106,7 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 }
 
 .seperator-line{
-    // width: 1640px;
     height: 1px;
-    margin: 207.5px 140px 189.5px;
-    background-color: #c1c1c1;
+    margin: rem(200) 0px rem(190);
+    background-color: $clr-seperator-line;
 }
