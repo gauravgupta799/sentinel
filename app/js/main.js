@@ -31,7 +31,7 @@ closeMenuBtn.addEventListener("click", function(){
 
 
 //====== Swiper start ======
-var swiper = new Swiper(".mySwiper", {
+var swiper1 = new Swiper(".mySwiper", {
   spaceBetween: 30,
   grabCursor: true,
   slidesPerView:1,
@@ -43,7 +43,7 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
-var swiper = new Swiper(".mySwiper--hero", {
+var swiper2 = new Swiper(".mySwiper--hero", {
   spaceBetween: 30,
   grabCursor: true,
   slidesPerView:1,

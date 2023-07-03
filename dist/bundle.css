@@ -13920,6 +13920,7 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .hero__heading {
   font-family: "Poppins extra-bold";
   padding-inline: 1.25rem;
+  text-transform: capitalize;
 }
 
 .counters {
@@ -14192,6 +14193,68 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   width: 17.5rem;
   padding: 50px 20px 50px 50px;
   background-color: #fff;
+}
+
+.testiomonials {
+  background-image: url("../../../app/assets/img/team/navy-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 435px 0px 235px 0px;
+}
+
+.chief__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.chief__list-item::before {
+  content: url("../../../app/assets/icons/check-icon.svg");
+  margin-right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: #f4f4f7;
+  padding: 8px;
+  border-radius: 50%;
+}
+.chief__figcaption {
+  position: absolute;
+  top: 80px;
+  right: 0;
+}
+
+.thumbnail__figure {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+.thumbnail__figure img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.chevron-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5625rem;
+}
+
+.chevron-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #c9cace;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: static !important;
+  margin: 0 !important;
 }
 
 .nav {
