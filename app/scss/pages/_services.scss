@@ -37,18 +37,18 @@
 
 /* Circle */
 .circle {
-    background: #f4f5f7;
+    background: $clr-athens-gray;
     position: relative;
     width: 2.5em;
     height: 2.5em;
     line-height: 1.5em;
     border-radius: 50%;
-    border:1px solid #000;
+    border:1px solid $clr-black;
     margin-right: rem(25);
 }
   
 /* Vertical Line */
-.circle::before {
+.circle::after {
     content: ' ';
     position: absolute;
     display: block;
@@ -62,7 +62,7 @@
     // transform: scale(1, 2);
     // transform-origin: 50% -100%;
     background-color:  red;
-    z-index: -1;
+    // z-index: -1;
 }
 
 

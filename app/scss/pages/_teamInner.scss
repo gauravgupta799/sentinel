@@ -8,7 +8,12 @@
     background-image:url("../../../app/assets/img/team/navy-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 435px 0px 235px 0px;
+    padding-block: em(435) em(235);
+
+    button{
+        display:block;
+        margin: 0 auto;
+    }
 }
 
 .chief{
@@ -37,11 +42,15 @@
     }
 }
 
-
 .thumbnail__figure{
-
-    @include flex-center-vertical;
+    @include flex-column;
+    align-items: center;
     gap: 48px;
+
+    @include breakpoint-sm{
+        flex-direction: row;
+        align-items: end;
+     }
 
     img{
         width: 140px;
@@ -49,6 +58,11 @@
         @include border-radius(50%);
     }
 }
+
+.thumbnail__caption{
+    text-align: center;
+}
+
 .chevron-container{
     @include flex-center;
     gap: 1rem;

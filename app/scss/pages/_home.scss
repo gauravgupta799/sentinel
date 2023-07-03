@@ -42,6 +42,7 @@
     &__num{
         font-size: clamp(3rem, 6vw + 1rem, 5rem);
         color:$clr-white;
+        font-family: 'Poppins semi-bold';
     }
     &::before{
         content:url("../../../app/assets/img/clip-img/Path-1.svg");
@@ -51,6 +52,13 @@
         left: 6%;
     }
     
+}
+
+.our-vision{
+
+    &__title{
+        font-family: 'Poppins bold';
+    }
 }
 
 .rectangle-bg{

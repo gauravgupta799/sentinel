@@ -31,7 +31,24 @@ closeMenuBtn.addEventListener("click", function(){
 
 
 //====== Swiper start ======
-var swiper1 = new Swiper(".mySwiper", {
+// const swiper = document.querySelectorAll('.swiper');
+
+// for(let i = 1; i < swiper.length; i++){
+//   var swiperWrapper = swiper[i];
+
+//   swiperWrapper = new Swiper(`.swiper-container-${i}`, {
+//     spaceBetween: 30,
+//     grabCursor: true,
+//     slidesPerView:1,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//   });
+// }
+
+
+var swiper1 = new Swiper(".swiper-container-1", {
   spaceBetween: 30,
   grabCursor: true,
   slidesPerView:1,
@@ -43,7 +60,7 @@ var swiper1 = new Swiper(".mySwiper", {
 });
 
 
-var swiper2 = new Swiper(".mySwiper--hero", {
+var swiper2 = new Swiper(".swiper-container-2", {
   spaceBetween: 30,
   grabCursor: true,
   slidesPerView:1,
@@ -51,7 +68,22 @@ var swiper2 = new Swiper(".mySwiper--hero", {
     el: ".swiper-pagination",
     clickable: true,
   },
+});
 
+var swiper3 = new Swiper(".swiper-container-3", {
+  spaceBetween: 20,
+  grabCursor: true,
+  slidesPerView:1,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    992:{
+      spaceBetween: 10,
+      slidesPerView:1.5,
+    }
+  }
 });
 
 //====== Swiper end ======

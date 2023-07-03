@@ -13940,6 +13940,7 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .counters__num {
   font-size: clamp(3rem, 6vw + 1rem, 5rem);
   color: #fff;
+  font-family: "Poppins semi-bold";
 }
 .counters::before {
   content: url("../../../app/assets/img/clip-img/Path-1.svg");
@@ -13947,6 +13948,10 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   bottom: -80px;
   z-index: -1;
   left: 6%;
+}
+
+.our-vision__title {
+  font-family: "Poppins bold";
 }
 
 .rectangle-bg {
@@ -14233,7 +14238,11 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   background-image: url("../../../app/assets/img/team/navy-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 435px 0px 235px 0px;
+  padding-block: 27.1875em 14.6875em;
+}
+.testiomonials button {
+  display: block;
+  margin: 0 auto;
 }
 
 .chief__list {
@@ -14258,13 +14267,24 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 
 .thumbnail__figure {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 48px;
+}
+@media only screen and (min-width: 36em) {
+  .thumbnail__figure {
+    flex-direction: row;
+    align-items: end;
+  }
 }
 .thumbnail__figure img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
+}
+
+.thumbnail__caption {
+  text-align: center;
 }
 
 .chevron-container {
@@ -14345,7 +14365,7 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 }
 
 /* Vertical Line */
-.circle::before {
+.circle::after {
   content: " ";
   position: absolute;
   display: block;
@@ -14353,7 +14373,6 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   height: 100%;
   width: 1px;
   background-color: red;
-  z-index: -1;
 }
 
 .step.step-active {
