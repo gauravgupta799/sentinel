@@ -190,19 +190,23 @@
 
 .add-value{
     background-color: $clr-secondary;
-    margin-top: rem(100);
+    padding-block: em(128);
     position: relative;
     overflow: hidden;
 
     @include breakpoint-sm{
-        margin-top: rem(150);
+        padding-block: rem(160);
     }
     @include breakpoint-md{
-        margin-top: rem(200);
+        padding-block: rem(192);
     }
     @include breakpoint-lg{
-        margin-top: rem(300);
+        padding-block: rem(240);
     }
+    @include breakpoint-xl{
+        padding-block: rem(290);
+    }
+
 
     &::before, &::after{
         position: absolute;

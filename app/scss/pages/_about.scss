@@ -28,7 +28,7 @@
 }
 
 .revolution{
-    padding: 296px 0px 200px;
+    padding: 300px 0px 200px;
     background-color: $clr-card;
 }
 
@@ -41,10 +41,18 @@
     &::after{
         content: "";
         position: absolute;
-        width: 100%;
-        height: 2px;
+        width: 2px;
+        height: 90vh;
+        // min-height: 100%;
         background-color:#bebebe;;
-        top: 300px;
+        top: 0;
+        left: 25px;
+
+        @include breakpoint-md{
+            width: 100%;
+            height: 2px;
+            top: 300px;
+        }
     }
 
     &__wrapper{
@@ -55,18 +63,35 @@
             position: absolute;
             width: 30px;
             height: 30px;
-            background-color: white;
-            border: 8px solid #3965dd;
-            top: 285px;
+            background-color: $clr-white;
+            border: 8px solid $clr-secondary;
+            top: 0;
             border-radius: 50%;
             z-index: 1;
-            left:0;
+
+            @include breakpoint-md{
+               left: 0;
+               top: 285px;
+            }
         }
     }
 
     &__content{
+        max-width: 70%;
         width: rem(280);
-        padding: 50px 20px 50px 50px;
+        padding: em(16) em(32);
         background-color: $clr-white;
+        margin: 0 auto;
+
+        @include breakpoint-sm{
+            padding: em(25) em(40);
+        }
+        @include breakpoint-md{
+            padding: em(30) em(20);
+        }
+        @include breakpoint-lg{
+            padding: em(40) em(20);
+        }
+   
     }
 }

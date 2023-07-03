@@ -1,0 +1,78 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+.steps{
+    background-color:$clr-athens-gray;
+    padding-block: em(110) em(180);
+
+    @include breakpoint-md{
+        padding-block: em(180) em(250);
+    }
+    @include breakpoint-lg{
+        padding-block: em(235) em(310);
+    }
+}
+
+.step{
+    position: relative;
+    min-height: 1em;
+    @include flex-center-vertical;
+}
+
+.step:not(:first-child) {
+    margin-top: rem(32);
+
+    @include breakpoint-md{
+        margin-top: rem(48)
+    }
+    @include breakpoint-lg{
+        margin-top: rem(64);
+    }
+    @include breakpoint-xl{
+        margin-top: rem(96);
+    }
+}
+
+/* Circle */
+.circle {
+    background: #f4f5f7;
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 1.5em;
+    border-radius: 50%;
+    border:1px solid #000;
+    margin-right: rem(25);
+}
+  
+/* Vertical Line */
+.circle::before {
+    content: ' ';
+    position: absolute;
+    display: block;
+    // top: 1px;
+    // right: 50%;
+    // bottom: 1px;
+    // left: 50%;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    // transform: scale(1, 2);
+    // transform-origin: 50% -100%;
+    background-color:  red;
+    z-index: -1;
+}
+
+
+.step:last-child .circle::after {
+    // display: none
+}
+  
+.step.step-active {
+    color: #4285f4
+}
+.step.step-active .circle {
+    background-color: #4285f4;
+}
