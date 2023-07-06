@@ -9,7 +9,7 @@
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding-block: rem(16);
+    padding-block:em(8);
 
     &__container{
         @include flex-space-between;
@@ -60,7 +60,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        // height: 100vh;
+        margin-top: rem(100);
     }
 }
 

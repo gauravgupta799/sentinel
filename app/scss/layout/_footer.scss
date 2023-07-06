@@ -8,16 +8,16 @@
 
     &__top{
         background-color: $clr-primary;
-        padding-block: rem(64);
+        padding-block: em(32);
 
         @include breakpoint-sm{
-            padding-block: rem(100);
+            padding-block: em(60);
         }
         @include breakpoint-md{
-            padding-block: rem(120) rem(197);
+            padding-block: em(90);
         }
         @include breakpoint-lg{
-            padding-block: rem(154) rem(227);
+            padding-block: em(120);
         }
     }
 
@@ -25,7 +25,7 @@
         height: rem(60);
     }
     &__bottom{
-        padding-block: rem(32) rem(25);
+        padding-block:em(16);
     }
 
     &__grid{

@@ -70,13 +70,19 @@ var swiper2 = new Swiper(".swiper-container-2", {
   },
 });
 
+
 var swiper3 = new Swiper(".swiper-container-3", {
   spaceBetween: 20,
   grabCursor: true,
   slidesPerView:1,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  loop: true,
+  // pagination: {
+  //   el: ".swiper-pagination",
+  //   clickable: true,
+  // },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     992:{

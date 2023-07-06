@@ -8,9 +8,13 @@
     @include background-cover;
     height: rem(1080);
     position: relative;
-    @include flex-center;
-    flex-direction: column;
+    @include  flex-column;
+    justify-content: center;
     z-index: 1;
+
+    // @include breakpoint-sm{
+    //     align-items: center;
+    // }
 
     &::after{
         content:"";
@@ -23,8 +27,12 @@
     }
     &__heading{
         font-family: 'Poppins extra-bold';
-        padding-inline: rem(20);
+        padding-inline: em(0);
         text-transform: capitalize;
+
+        @include breakpoint-lg{
+            padding-inline: em(20);
+        }
     }
 }
 

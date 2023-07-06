@@ -33,3 +33,21 @@
     background-color:$clr-white;
     color:$clr-secondary;
 }
+
+.btn--transparent{
+    background: transparent;
+    border:1px solid $clr-primary;
+    color:$clr-primary;
+    padding:em(15) em(42);
+    @include transition(0.5s, ease-in-out);
+}
+
+.btn--transparent:hover{
+    background:$clr-primary;
+    color:white;
+}
+
+.btn-active{
+    background:$clr-primary;
+    color:white;
+}

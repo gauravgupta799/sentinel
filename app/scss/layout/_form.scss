@@ -1,0 +1,35 @@
+@use "../abstract/breakpoints" as *;
+@use "../abstract/colors" as *;
+@use "../abstract/functions" as *;
+@use "../abstract/mixins" as *;
+
+
+input, textarea{
+    outline:none;
+    border:none;
+    border-bottom: 1px solid #bbb;
+    width: 766px;
+    max-width: 90%;
+    font-size: 20px;
+}
+input{
+    padding-block: 12px;
+}
+
+textarea{
+    resize: none;
+}
+
+::placeholder{
+    font-family: 'Poppins';
+}
+
+input:focus, 
+textarea:focus{
+    border-color: $clr-primary;
+    @include transition(0.5s, ease-in);
+
+    &::placeholder{
+        opacity: 0;
+    }
+}
