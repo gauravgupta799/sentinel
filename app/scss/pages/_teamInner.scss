@@ -5,23 +5,20 @@
 
 
 .testiomonials{
-    background-image:url("../../../app/assets/img/team/navy-bg.svg");
+    background-image:url("./../app/assets/img/team/navy-bg.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     padding-block: em(235);
-
     @include breakpoint-md{
         background-position: center;
     }
     @include breakpoint-lg{
         background-position: left;
     }
-
     button{
         display:block;
         margin: 0 auto;
-
         @include breakpoint-lg{
             margin-inline: 0;
         }
@@ -29,15 +26,13 @@
 }
 
 .chief{
-
     &__list{
         @include flex-column;
         gap:1rem;
     }
     &__list-item{
-
         &::before{
-            content: url("../../../app/assets/icons/check-icon.svg");
+            content: url("./../app/assets/icons/check-icon.svg");
             margin-right: rem(32);
             width: 44px;
             height: 44px;
@@ -46,23 +41,18 @@
             @include border-radius(50%);
         }
     }
-
     &__figure{
-
         @include breakpoint-md{
             position: relative;
             height: 100%;
         }
-
         img{
             @include breakpoint-md{
                 height: 100%;
             }
         }
     }
-
     &__figcaption{
-        
         @include breakpoint-md{
             position: absolute;
             top: 80px;
@@ -75,12 +65,10 @@
     @include flex-column;
     align-items: center;
     gap: 48px;
-
     @include breakpoint-lg{
         flex-direction: row;
         align-items: end;
-     }
-
+    }
     img{
         width: 140px;
         height: 140px;
@@ -90,7 +78,6 @@
 
 .thumbnail__caption{
     text-align: center;
-
     @include breakpoint-lg{
         text-align:left;
     }
@@ -110,24 +97,17 @@
     @include flex-center;
     border:1px solid $clr-border;
     @include transition(0.5s, ease-in-out);
-
     @include breakpoint-lg{
         width: 80px;
         height: 80px;
     }
-
     &:hover{
         background-color:$clr-secondary;
     }
 }
-
-.swiper-button-prev, .swiper-button-next{
-    position:static !important;
-    margin: 0 !important;
-
-}
-
 .awards{
-    padding-inline: em(82);
+    @include breakpoint-lg{
+        padding-inline: em(82);
+    }
 }
 

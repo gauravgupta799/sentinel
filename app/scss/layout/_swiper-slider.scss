@@ -4,19 +4,18 @@
 .swiper-pagination{
     position:static !important;
 }
-
 .swiper-pagination--hero{
     margin-top: rem(133) !important;
 }
 .swiper-pagination--testimonial{
     margin-top: rem(72) !important;
 }
-
 .swiper-pagination-bullet{
     height: rem(17) !important;
     width: rem(17) !important;
     border-radius: 0 !important;
-    background:transparent !important;
+    background:$clr-white !important;
+    opacity: 1 !important;
     border:1px solid $clr-secondary!important;
 }
 .swiper-pagination-bullet-active{
@@ -24,13 +23,13 @@
     width: rem(20) !important;
     background-color:$clr-secondary !important;
 }
-
-.swiper-pagination--hero .swiper-pagination-bullet{
-    width: rem(16) !important;
-    height: rem(16) !important;
-    background-color: $clr-white !important;
+.swiper-pagination--hero
+.swiper-pagination-bullet-active{
+    background-color:$clr-secondary !important;
 }
 
-.swiper-pagination--hero .swiper-pagination-bullet-active{
-    background-color:$clr-secondary !important;
+.swiper-button-prev, 
+.swiper-button-next{
+    position:static !important;
+    margin: 0 !important;
 }

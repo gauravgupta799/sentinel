@@ -4,18 +4,13 @@
 @use "../abstract/mixins" as *;
 
 .hero{
-    background-image: url("../../../app/assets/img/intro-background-xs-min.webp");
+    background-image: url("./../app/assets/img/intro-background-xs-min.webp");
     @include background-cover;
     height: rem(1080);
     position: relative;
     @include  flex-column;
     justify-content: center;
     z-index: 1;
-
-    // @include breakpoint-sm{
-    //     align-items: center;
-    // }
-
     &::after{
         content:"";
         position:absolute;
@@ -40,7 +35,6 @@
     padding: 100px 0px 100px;
     background-color: $clr-primary;
     position: relative;
-
     @include breakpoint-md{
         padding: 160px 0px 160px;
     }
@@ -53,41 +47,35 @@
         font-family: 'Poppins semi-bold';
     }
     &::before{
-        content:url("../../../app/assets/img/clip-img/Path-1.svg");
+        content:url("./../app/assets/img/clip-img/Path-1.svg");
         position: absolute;
         bottom: -80px;
         z-index: -1;
         left: 6%;
     }
-    
 }
 
 .our-vision{
-
     &__title{
         font-family: 'Poppins bold';
     }
 }
 
 .rectangle-bg{
-    background-image:url("../../../app/assets/img/rectangle-bg.webp");
+    background-image:url("./../app/assets/img/rectangle-bg.webp");
     background-repeat: no-repeat;
     position: relative;
-
     @include breakpoint-lg{
         background-position:180%;
         padding-top: rem(80);
     }
-
     &::before{
-        content:url("../../../app/assets/img/clip-img/Path-3.svg");
+        content:url("./../app/assets/img/clip-img/Path-3.svg");
         position: absolute;
         right: 0;
         top: -50px;
         z-index: -1;
     }
-
-    
 }
 
 .blob-2{
@@ -98,10 +86,9 @@
 }
 
 .rectangle-bg--left{
-    background-image:url("../../../app/assets/img/rectangle-bg.webp");
+    background-image:url("./../app/assets/img/rectangle-bg.webp");
     background-repeat: no-repeat;
     padding: 80px 0px 80px 0px;
-
     @include breakpoint-lg{
         background-position:-80%;
         padding: 80px 0px 200px 0px;
@@ -111,19 +98,15 @@
 
 .brands{
     position: relative;
-
     &__container{
-        padding-block: 100px 120px;
+        padding-block: em(50);
         background-color: $clr-athens-gray;
 
         @include breakpoint-sm{
-            padding-block: 150px 180px;
+            padding-block: em(100);
         }
         @include breakpoint-md{
-            padding-block: 250px 280px;
-        }
-        @include breakpoint-lg{
-            padding-block: 325px 450px;
+            padding-block: em(150);
         }
     }
     &__logo-2{
@@ -136,7 +119,6 @@
 
 .sustainable{
     position: relative;
-
     &__figure{
         position: relative;
         img{
@@ -148,11 +130,10 @@
             inset:0;
             width: 100%;
             height: 100%;
-            background-image: url("../../../app/assets/img/canterbury-bg.svg");
+            background-image: url("./../app/assets/img/canterbury-bg.svg");
             @include background-cover;
         }
     }
-
     &__figcaption{
         position: absolute;
         bottom: 0;
@@ -175,13 +156,10 @@
         position: relative;
         overflow: hidden;
         z-index: 1;
-
         &::before{
-            content: url("../../../app/assets/img/clip-img/Path-3.svg");
+            content: url("./../app/assets/img/clip-img/Path-3.svg");
             position: absolute;
             z-index: -1;
-            // top: -30px;
-            // right: 280px;
             right: 500px;
             top: 90px;
         }
@@ -189,13 +167,12 @@
 }
 
 .awards{
-  background-color: $clr-athens-gray;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-
-  &::before{
-        content:url("../../../app/assets/img/clip-img/Path-9.svg");
+    background-color: $clr-athens-gray;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &::before{
+        content:url("./../app/assets/img/clip-img/Path-9.svg");
         position: absolute;
         top: 44%;
         left: 56%;
@@ -209,7 +186,6 @@
     padding-block: em(128);
     position: relative;
     overflow: hidden;
-
     @include breakpoint-sm{
         padding-block: rem(160);
     }
@@ -222,22 +198,18 @@
     @include breakpoint-xl{
         padding-block: rem(290);
     }
-
-
     &::before, &::after{
         position: absolute;
         opacity: 0.19;
     }
-
     &::before{
-        content:url("../../../app/assets/img/clip-img/Path-6.svg");
+        content:url("./../app/assets/img/clip-img/Path-6.svg");
         left: rem(-230);
         top: rem(145);
         bottom: rem(189);
     }
-
     &::after{
-        content:url("../../../app/assets/img/clip-img/Path-7.svg");
+        content:url("./../app/assets/img/clip-img/Path-7.svg");
         right: 0;
         bottom: rem(40);
         right: rem(-160);
@@ -250,7 +222,6 @@
         &:hover{
             cursor: pointer;
             transform:translateX(6px);
-
             path{
                 transition:all 0.4s ease-in;
                 fill:$clr-secondary;

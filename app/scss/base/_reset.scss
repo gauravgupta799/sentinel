@@ -1,6 +1,5 @@
 /*!-----------------------------
   []
-
   Project: Sentinel
   Version:    1.0
   Last change:   19-06-2023 6:00pm [Home page mockup]
@@ -33,7 +32,6 @@
     font-weight: normal;
     font-stretch: normal;
     letter-spacing: normal;
-    // background-color: $clr-body;
     color:$clr-white;
     color:$clr-primary;
     font-family: 'Poppins';
@@ -91,4 +89,9 @@
   h5,
   h6 {
     font-size: 100%;
+}
+
+::selection{
+  background:$clr-primary;
+  color:$clr-white;
 }

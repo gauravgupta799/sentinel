@@ -6,7 +6,6 @@
 .steps{
     background-color:$clr-athens-gray;
     padding-block: em(110) em(180);
-
     @include breakpoint-md{
         padding-block: em(180) em(250);
     }
@@ -23,7 +22,6 @@
 
 .step:not(:first-child) {
     margin-top: rem(32);
-
     @include breakpoint-md{
         margin-top: rem(48)
     }
@@ -65,14 +63,15 @@
     // z-index: -1;
 }
 
-
-.step:last-child .circle::after {
+.step:last-child 
+.circle::after {
     // display: none
 }
   
 .step.step-active {
-    color: #4285f4
+    color: $clr-secondary;
 }
+
 .step.step-active .circle {
-    background-color: #4285f4;
+    background-color:$clr-secondary;
 }

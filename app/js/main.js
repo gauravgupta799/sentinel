@@ -11,6 +11,15 @@ window.onload = () =>{
 }
 //====== Pre-loader end ======
 
+// Active Page Link
+const activePage = window.location.pathname;
+const navLinks = document.querySelectorAll(".nav__link");
+navLinks.forEach(link =>{
+  if(link.href.includes(`${activePage }`)){
+    link.classList.add("active");
+  }
+})
+
 //====== Sticky header start ======
 window.addEventListener("scroll", () => {
     if (window.scrollY > 10) {
@@ -76,10 +85,6 @@ var swiper3 = new Swiper(".swiper-container-3", {
   grabCursor: true,
   slidesPerView:1,
   loop: true,
-  // pagination: {
-  //   el: ".swiper-pagination",
-  //   clickable: true,
-  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",

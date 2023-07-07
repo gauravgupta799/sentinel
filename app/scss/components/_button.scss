@@ -10,18 +10,13 @@
     font-size:rem(16);
     padding: em(14) em(36);
     color:$clr-white;
-    // background:transparent;
-
     &:hover{
         cursor: pointer;
     }
-
     @include breakpoint-sm{
-        // font-size:rem(18);
         padding: em(18) em(44);
     }
     @include breakpoint-md{
-        // font-size: rem(24);
         padding: em(23) em(56);
     }
 }
@@ -29,6 +24,7 @@
 .btn--primary{
     background-color:$clr-secondary;
 }
+
 .btn--secondary{
     background-color:$clr-white;
     color:$clr-secondary;
@@ -44,10 +40,10 @@
 
 .btn--transparent:hover{
     background:$clr-primary;
-    color:white;
+    color:$clr-white;
 }
 
 .btn-active{
     background:$clr-primary;
-    color:white;
+    color:$clr-white;
 }

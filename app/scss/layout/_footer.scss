@@ -5,11 +5,9 @@
 
 
 .footer{
-
     &__top{
         background-color: $clr-primary;
         padding-block: em(32);
-
         @include breakpoint-sm{
             padding-block: em(60);
         }
@@ -17,23 +15,20 @@
             padding-block: em(90);
         }
         @include breakpoint-lg{
-            padding-block: em(120);
+            padding-block: em(110);
         }
     }
-
     &__logo{
         height: rem(60);
     }
     &__bottom{
         padding-block:em(16);
     }
-
     &__grid{
         display: grid;
         grid-gap:1rem;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-
     &__list{
         display: flex;
         flex-direction: column;
@@ -43,7 +38,6 @@
         font-size: rem(18);
         line-height: 2;
         font-weight: 500;
-
         @include breakpoint-md{
             font-size: rem(20);
         }
@@ -51,25 +45,20 @@
             font-size: rem(24);
         }
     }
-  
     &__item{
         font-weight: 300 !important;
     }
-    
     &__link{
         transition:all 0.4s ease-in-out;
-
         &:hover{
             color:$clr-secondary;
         }
-
         svg{
             path{
                 transition:all 0.4s ease-in-out;
-
-            &:hover{
-                fill:$clr-secondary;
-            }
+                &:hover{
+                    fill:$clr-secondary;
+                }
             }
         }
     }
