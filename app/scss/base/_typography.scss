@@ -16,12 +16,29 @@ $breakpoints: (
 
 // Null is mobile, no breakpoint.
 $p-font-sizes: (
-  null:(rem(16), rem(32)), // Font sizes and line height 
-  sm: (rem(16), rem(32)),
-  md: (rem(18), rem(36)),
+  null:(rem(16), rem(28)), // Font sizes and line height 
+  sm: (rem(16), rem(28)),
+  md: (rem(16), rem(32)),
   lg: (rem(18), rem(36)),
-  xl: (rem(20), rem(40)),
-  xxl:(rem(24), rem(48)), 
+  xl: (rem(18), rem(36)),
+  xxl:(rem(20), rem(44)), 
+);
+// $p-font-sizes: (
+//   null:(rem(16), rem(32)), // Font sizes and line height 
+//   sm: (rem(16), rem(32)),
+//   md: (rem(18), rem(36)),
+//   lg: (rem(18), rem(36)),
+//   xl: (rem(18), rem(36)),
+//   xxl:(rem(24), rem(48)), 
+// );
+
+$sec-para-sizes: (
+  null:(rem(18), rem(32)), // Font sizes and line height 
+  sm: (rem(18), rem(32)),
+  md: (rem(18), rem(32)),
+  lg: (rem(20), rem(36)),
+  xl: (rem(20), rem(36)),
+  xxl:(rem(24), rem(44)), 
 );
 
 $h1-font-sizes: (
@@ -144,4 +161,8 @@ h1, h2, h3, h4, h5, h6{
 p, ul, ol, body{
     @include font-size($p-font-sizes);
     // @include font-body;
+}
+
+.sec__para{
+  @include font-size($sec-para-sizes);
 }

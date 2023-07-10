@@ -70,13 +70,16 @@
         }
     }
     &__content{
-        max-width: 70%;
-        width: rem(280);
+        // max-width: 70%;
+        // width: rem(280);
+        max-width: 100%;
         padding: em(16) em(32);
         background-color: $clr-white;
         margin: 0 auto;
+        margin-left: rem(64);
         @include breakpoint-sm{
             padding: em(25) em(40);
+            margin-left: 0;
         }
         @include breakpoint-md{
             padding: em(30) em(20);

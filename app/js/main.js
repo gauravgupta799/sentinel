@@ -56,7 +56,6 @@ closeMenuBtn.addEventListener("click", function(){
 //   });
 // }
 
-
 var swiper1 = new Swiper(".swiper-container-1", {
   spaceBetween: 30,
   grabCursor: true,
@@ -68,7 +67,6 @@ var swiper1 = new Swiper(".swiper-container-1", {
 
 });
 
-
 var swiper2 = new Swiper(".swiper-container-2", {
   spaceBetween: 30,
   grabCursor: true,
@@ -78,7 +76,6 @@ var swiper2 = new Swiper(".swiper-container-2", {
     clickable: true,
   },
 });
-
 
 var swiper3 = new Swiper(".swiper-container-3", {
   spaceBetween: 20,
@@ -98,5 +95,3 @@ var swiper3 = new Swiper(".swiper-container-3", {
 });
 
 //====== Swiper end ======
-
-

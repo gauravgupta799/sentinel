@@ -10,7 +10,16 @@ input, textarea{
     border-bottom: 1px solid #bbb;
     width: 766px;
     max-width: 90%;
-    font-size: 20px;
+    font-size: rem(16);
+    @include breakpoint-md{
+        font-size: rem(18);
+    }
+    @include breakpoint-lg{
+        font-size: rem(20);
+    }
+    @include breakpoint-xxl{
+        font-size: rem(24);
+    }
 }
 input{
     padding-block: 12px;

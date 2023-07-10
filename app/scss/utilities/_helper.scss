@@ -19,7 +19,6 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 .text-white{
     color:$clr-white !important;
 }
-
 .text-uppercase{
     text-transform:uppercase;
 }
@@ -58,6 +57,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p{
 
 .z--2{
     z-index: 2;
+}
+.clr-primary{
+    color: $clr-primary;
 }
 
 // .secondary--para{

@@ -31,6 +31,20 @@
     }
 }
 
+// .property{
+
+//     &__figure{
+//         position: relative;
+//         overflow: hidden;
+//         z-index: 1;
+//         &::before{
+//             content:url("../../../app/assets/img/clip-img/Path-1.svg");
+//             position: absolute;
+//             z-index: -1;
+//         }
+//     }
+// }
+
 .counters{
     padding: 100px 0px 100px;
     background-color: $clr-primary;
@@ -152,17 +166,19 @@
 }
 
 .testimonial{
-    &__slide-wrapper{
-        position: relative;
+    &__thumbnail{
+        // position: relative;
         overflow: hidden;
-        z-index: 1;
+        // z-index: 1;
         &::before{
             content: url("./../app/assets/img/clip-img/Path-3.svg");
             position: absolute;
             z-index: -1;
-            right: 500px;
-            top: 90px;
-        }
+            // right: 500px;
+            // top: 90px;
+            margin-top: rem(-35);
+            margin-left: rem(105);
+            }
     }
 }
 
@@ -217,8 +233,23 @@
 }
 
 .arrow-forward-wrapper{
+    display: inherit;
     svg{
         transition:all 0.4s ease-in;
+        width:rem(25);
+        height: rem(25);
+        @include breakpoint-sm{
+            width:rem(28);
+            height: rem(28);
+        }
+        @include breakpoint-md{
+            width:rem(31);
+            height: rem(31);
+        }
+        @include breakpoint-lg{
+            width:rem(34);
+            height: rem(34);
+        }
         &:hover{
             cursor: pointer;
             transform:translateX(6px);
