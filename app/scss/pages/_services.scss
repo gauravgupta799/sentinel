@@ -12,66 +12,86 @@
     @include breakpoint-lg{
         padding-block: em(235) em(310);
     }
-}
 
-.step{
-    position: relative;
-    min-height: 1em;
-    @include flex-center-vertical;
-}
-
-.step:not(:first-child) {
-    margin-top: rem(32);
-    @include breakpoint-md{
-        margin-top: rem(48)
+    &__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+        min-height: 100%;
+        height: 400px;
+        z-index: 1;
+        &::before{
+            content:"";
+            background-color: #707070;
+            position: absolute;
+            left: 25px;
+            width: 3px;
+            height: calc(100% - 2px);
+            z-index: -1;
+            transition:all 0.4s ease;
+        }
     }
-    @include breakpoint-lg{
-        margin-top: rem(64);
+
+    &__progress{
+        background-color: $clr-secondary;
+        position: absolute;
+        left: 25px;
+        width: 3px;
+        height: 0%;
+        z-index: -1;
+        transition:all 0.4s ease;
     }
-    @include breakpoint-xl{
-        margin-top: rem(96);
+    &__item{
+        @include flex-center-vertical;
+    }
+
+    &__circle{
+        background: $clr-athens-gray;
+        position: relative;
+        width: rem(50);
+        height: rem(50);
+        line-height: 1.5em;
+        border:1px solid $clr-black;
+        margin-right: rem(25);
+        @include border-radius(50%);
+        @include flex-center;
+        cursor: pointer;
+        &.active{
+            border-color: $clr-secondary;
+            &::after{
+                content:"";
+                position: absolute;
+                width: rem(25);
+                height: rem(25);
+                @include border-radius(50%);
+                background-color: $clr-secondary;    
+            }
+        } 
+    }
+
+    &__title{
+        opacity: 0.6;
+
+        &.active{
+          opacity: 1;
+        }
     }
 }
 
-/* Circle */
-.circle {
-    background: $clr-athens-gray;
-    position: relative;
-    width: 2.5em;
-    height: 2.5em;
-    line-height: 1.5em;
-    border-radius: 50%;
-    border:1px solid $clr-black;
-    margin-right: rem(25);
-}
-  
-/* Vertical Line */
-.circle::after {
-    content: ' ';
-    position: absolute;
-    display: block;
-    // top: 1px;
-    // right: 50%;
-    // bottom: 1px;
-    // left: 50%;
-    left: 0;
-    height: 100%;
-    width: 1px;
-    // transform: scale(1, 2);
-    // transform-origin: 50% -100%;
-    background-color:  red;
-    // z-index: -1;
-}
 
-.step:last-child 
-.circle::after {
-    // display: none
-}
-  
-.step.step-active {
-    color: $clr-secondary;
-}
 
-.step.step-active .circle {
-    background-color:$clr-secondary;
-}
+
+
+
+
+
+
+// .step.step-active {
+//     color: $clr-secondary;
+// }
+
+// .step.step-active .circle {
+//     background-color:$clr-secondary;
+// }

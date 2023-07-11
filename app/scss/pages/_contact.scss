@@ -5,6 +5,17 @@
 
 .budget-btn-wrapper{
     @include flex-center-vertical;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     gap:rem(16);
+}
+.radio-btn-wrapper{
+    display: flex;
+    height: 60px;
+    width: 180px;
+    border: solid 1px #192544;
+    background-color: #fff;
+    justify-content: center;
+}
+.btn--radio{
+    background:transparent;
 }

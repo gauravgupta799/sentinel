@@ -1,12 +1,23 @@
 @use "../abstract/colors" as *;
 @use "../abstract/functions" as *;
+@use "../abstract/breakpoints" as *;
 
 .swiper-pagination{
     position:static !important;
 }
+
 .swiper-pagination--hero{
     margin-top: rem(133) !important;
+
+    @include breakpoint-xl{
+        margin-top: rem(120) !important;
+    }
+
+    @include breakpoint-xxl{
+        margin-top: rem(80) !important;
+    }
 }
+
 .swiper-pagination--testimonial{
     margin-top: rem(72) !important;
 }

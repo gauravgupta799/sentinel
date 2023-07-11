@@ -39,6 +39,11 @@
 
 html {
   scroll-behavior: smooth;
+  transition: 0.2s ease-in;
+  -webkit-transition: 0.2s ease-in;
+  -moz-transition: 0.2s ease-in;
+  -ms-transition: 0.2s ease-in;
+  -o-transition: 0.2s ease-in;
 }
 
 *::before,
@@ -138,14 +143,14 @@ h1 {
 }
 @media screen and (min-width: 62em) {
   h1 {
-    font-size: 3.5rem;
-    line-height: 4rem;
+    font-size: 3.25rem;
+    line-height: 4.375rem;
   }
 }
 @media screen and (min-width: 87.5em) {
   h1 {
-    font-size: 3.5rem;
-    line-height: 4.625rem;
+    font-size: 3.25rem;
+    line-height: 4.375rem;
   }
 }
 @media screen and (min-width: 100em) {
@@ -13987,33 +13992,51 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   padding-inline: 0em;
   text-transform: capitalize;
 }
-@media only screen and (min-width: 62em) {
+@media only screen and (min-width: 100em) {
   .hero__heading {
     padding-inline: 1.25em;
   }
 }
 
-.counters {
-  padding: 100px 0px 100px;
+.property__figure {
+  position: relative;
+  z-index: 1;
+}
+.property__figure::before {
+  content: url("../../../app/assets/img/clip-img/Path-1.svg");
+  position: absolute;
+  left: -10px;
+  bottom: -15px;
+  z-index: -1;
+}
+@media only screen and (min-width: 48em) {
+  .property__figure::before {
+    left: -58px;
+    bottom: -50px;
+  }
+}
+
+.counter {
+  padding-block: 8.75em;
   background-color: #192544;
   position: relative;
 }
 @media only screen and (min-width: 48em) {
-  .counters {
-    padding: 160px 0px 160px;
+  .counter {
+    padding-block: 10em;
   }
 }
 @media only screen and (min-width: 62em) {
-  .counters {
-    padding: 220px 150px 219px;
+  .counter {
+    padding-block: 11.25em;
   }
 }
-.counters__num {
+.counter__digit-wrapper {
   font-size: clamp(3rem, 6vw + 1rem, 5rem);
   color: #fff;
   font-family: "Poppins semi-bold";
 }
-.counters::before {
+.counter::before {
   content: url("./../app/assets/img/clip-img/Path-1.svg");
   position: absolute;
   bottom: -80px;
@@ -14036,12 +14059,35 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     padding-top: 5rem;
   }
 }
+@media only screen and (min-width: 100em) {
+  .rectangle-bg {
+    background-position: 100%;
+  }
+}
 .rectangle-bg::before {
   content: url("./../app/assets/img/clip-img/Path-3.svg");
   position: absolute;
-  right: 0;
-  top: -50px;
+  right: 15px;
+  top: -25px;
   z-index: -1;
+}
+@media only screen and (min-width: 36em) {
+  .rectangle-bg::before {
+    right: 20px;
+    top: -35px;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .rectangle-bg::before {
+    right: 38px;
+    top: -45px;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .rectangle-bg::before {
+    right: 0;
+    top: -50px;
+  }
 }
 
 .blob-2 {
@@ -14054,13 +14100,18 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .rectangle-bg--left {
   background-image: url("./../app/assets/img/rectangle-bg.webp");
   background-repeat: no-repeat;
-  padding: 80px 0px 80px 0px;
+  padding-block: 80px;
 }
 @media only screen and (min-width: 62em) {
   .rectangle-bg--left {
     background-position: -80%;
-    padding: 80px 0px 200px 0px;
+    padding-block: 80px 200px;
     margin-top: 8.75rem;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .rectangle-bg--left {
+    background-position: 0%;
   }
 }
 
@@ -14146,10 +14197,15 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .awards::before {
   content: url("./../app/assets/img/clip-img/Path-9.svg");
   position: absolute;
-  top: 44%;
+  top: 46%;
   left: 56%;
   transform: translate(-50%, -50%);
   z-index: -1;
+}
+@media only screen and (min-width: 100em) {
+  .awards::before {
+    top: 40%;
+  }
 }
 
 .add-value {
@@ -14472,69 +14528,88 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     padding-block: 14.6875em 19.375em;
   }
 }
-
-.step {
+.steps__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
-  min-height: 1em;
+  overflow: hidden;
+  min-height: 100%;
+  height: 400px;
+  z-index: 1;
+}
+.steps__list::before {
+  content: "";
+  background-color: #707070;
+  position: absolute;
+  left: 25px;
+  width: 3px;
+  height: calc(100% - 2px);
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+.steps__progress {
+  background-color: #3965dd;
+  position: absolute;
+  left: 25px;
+  width: 3px;
+  height: 0%;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+.steps__item {
   display: flex;
   align-items: center;
 }
-
-.step:not(:first-child) {
-  margin-top: 2rem;
-}
-@media only screen and (min-width: 48em) {
-  .step:not(:first-child) {
-    margin-top: 3rem;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .step:not(:first-child) {
-    margin-top: 4rem;
-  }
-}
-@media only screen and (min-width: 80.75em) {
-  .step:not(:first-child) {
-    margin-top: 6rem;
-  }
-}
-
-/* Circle */
-.circle {
+.steps__circle {
   background: #f4f5f7;
   position: relative;
-  width: 2.5em;
-  height: 2.5em;
+  width: 3.125rem;
+  height: 3.125rem;
   line-height: 1.5em;
-  border-radius: 50%;
   border: 1px solid #000;
   margin-right: 1.5625rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-
-/* Vertical Line */
-.circle::after {
-  content: " ";
+.steps__circle.active {
+  border-color: #3965dd;
+}
+.steps__circle.active::after {
+  content: "";
   position: absolute;
-  display: block;
-  left: 0;
-  height: 100%;
-  width: 1px;
-  background-color: red;
-}
-
-.step.step-active {
-  color: #3965dd;
-}
-
-.step.step-active .circle {
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 50%;
   background-color: #3965dd;
+}
+.steps__title {
+  opacity: 0.6;
+}
+.steps__title.active {
+  opacity: 1;
 }
 
 .budget-btn-wrapper {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.radio-btn-wrapper {
+  display: flex;
+  height: 60px;
+  width: 180px;
+  border: solid 1px #192544;
+  background-color: #fff;
+  justify-content: center;
+}
+
+.btn--radio {
+  background: transparent;
 }
 
 .nav {
@@ -14730,6 +14805,16 @@ textarea:focus::placeholder {
 
 .swiper-pagination--hero {
   margin-top: 8.3125rem !important;
+}
+@media only screen and (min-width: 80.75em) {
+  .swiper-pagination--hero {
+    margin-top: 7.5rem !important;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .swiper-pagination--hero {
+    margin-top: 5rem !important;
+  }
 }
 
 .swiper-pagination--testimonial {

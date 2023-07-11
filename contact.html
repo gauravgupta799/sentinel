@@ -119,10 +119,22 @@
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="">Your Current Budget</h6>
                             <div class="budget-btn-wrapper mt--1 mt--md--2">
-                                <button class="btn btn--transparent">under 5k</button>
-                                <button class="btn btn--transparent">under 5k</button>
-                                <button class="btn btn--transparent btn-active">under 5k</button>
-                                <button class="btn btn--transparent">under 5k</button>
+                                <div class="radio-btn-wrapper">
+                                    <input type="radio" class="btn--radio" name="budget-btn"/>
+                                    <label for="">under 5k</label>
+                                </div>
+                                <div class="radio-btn-wrapper">
+                                    <input type="radio" class="btn--radio" name="budget-btn"/>
+                                    <label for="">under 5k</label>
+                                </div>
+                                <div class="radio-btn-wrapper">
+                                    <input type="radio" class="btn--radio" name="budget-btn"/>
+                                    <label for="">under 5k</label>
+                                </div>
+                                <div class="radio-btn-wrapper">
+                                    <input type="radio" class="btn--radio" name="budget-btn"/>
+                                    <label for="">under 5k</label>
+                                </div>                        
                             </div>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
@@ -307,16 +319,16 @@
         </div>
     </footer>
     <!-- footer end -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
     <script src="./dist/bundle.min.js"></script>
 
-    <script>
+    <!-- <script>
         TweenMax.staggerFrom(".nav__item ", 1.5, {
             delay:0,
             opacity:0,
             y:-50,
             ease:Expo.easeInOut,
         },0.08);
-    </script>
+    </script> -->
 </body>
 </html>

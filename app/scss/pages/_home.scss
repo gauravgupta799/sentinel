@@ -25,37 +25,45 @@
         padding-inline: em(0);
         text-transform: capitalize;
 
-        @include breakpoint-lg{
+        @include breakpoint-xxl{
             padding-inline: em(20);
         }
     }
 }
 
-// .property{
+.property{
 
-//     &__figure{
-//         position: relative;
-//         overflow: hidden;
-//         z-index: 1;
-//         &::before{
-//             content:url("../../../app/assets/img/clip-img/Path-1.svg");
-//             position: absolute;
-//             z-index: -1;
-//         }
-//     }
-// }
+    &__figure{
+        position: relative;
+        // overflow: hidden;
+        z-index: 1;
+        &::before{
+            content:url("../../../app/assets/img/clip-img/Path-1.svg");
+            position: absolute;
+            left: -10px;
+            bottom: -15px;
+            z-index: -1;
 
-.counters{
-    padding: 100px 0px 100px;
+            @include breakpoint-md{
+                left: -58px;
+                bottom: -50px;
+            }
+        }
+    }
+}
+
+.counter{
+    padding-block: em(140);
     background-color: $clr-primary;
     position: relative;
+
     @include breakpoint-md{
-        padding: 160px 0px 160px;
+        padding-block: em(160);
     }
     @include breakpoint-lg{
-        padding: 220px 150px 219px;
+        padding-block: em(180);
     }
-    &__num{
+    &__digit-wrapper{
         font-size: clamp(3rem, 6vw + 1rem, 5rem);
         color:$clr-white;
         font-family: 'Poppins semi-bold';
@@ -83,12 +91,28 @@
         background-position:180%;
         padding-top: rem(80);
     }
+    @include breakpoint-xxl{
+        background-position:100%;
+    }
     &::before{
         content:url("./../app/assets/img/clip-img/Path-3.svg");
         position: absolute;
-        right: 0;
-        top: -50px;
+        right: 15px;
+        top: -25px;
         z-index: -1;
+
+        @include breakpoint-sm{
+            right: 20px;
+            top: -35px;
+        }
+        @include breakpoint-md{
+            right: 38px;
+            top: -45px;
+        }
+        @include breakpoint-lg{
+            right: 0;
+            top: -50px;
+        }
     }
 }
 
@@ -102,11 +126,14 @@
 .rectangle-bg--left{
     background-image:url("./../app/assets/img/rectangle-bg.webp");
     background-repeat: no-repeat;
-    padding: 80px 0px 80px 0px;
+    padding-block: 80px;
     @include breakpoint-lg{
         background-position:-80%;
-        padding: 80px 0px 200px 0px;
+        padding-block:80px 200px;
         margin-top: rem(140);
+    }
+    @include breakpoint-xxl{
+        background-position:0%;
     }
 }
 
@@ -182,6 +209,18 @@
     }
 }
 
+// .projects{
+//     &__figure{
+//         img{
+//             transition: transform 0.5s ease;
+//             transition: all 0.35s cubic-bezier(0.445, 0.05, 0.55, 0.95) !important ;
+//         }
+//         &:hover{
+//             cursor: pointer;
+//             transform: scale(1.05) !important;
+//         }
+//     }
+// }
 .awards{
     background-color: $clr-athens-gray;
     position: relative;
@@ -190,10 +229,14 @@
     &::before{
         content:url("./../app/assets/img/clip-img/Path-9.svg");
         position: absolute;
-        top: 44%;
+        top: 46%;
         left: 56%;
         transform: translate(-50%,-50%);
         z-index: -1;
+
+        @include breakpoint-xxl{
+            top: 40%;
+        }
     }
 }
 
