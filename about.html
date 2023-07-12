@@ -16,47 +16,37 @@
          </div>
     </div>
     <header class="header">
+        <!-- Dektop Menu start -->
         <div class="header__desktop-wrapper">
             <div class="page-container">
-              <div class="header__container">
-                  <div class="header__logo--wrapper">
-                      <a href="index.html">
-                          <img src="./app/assets/logos/Sentinel-main-logo.svg" alt="" class="header__logo">
-                      </a>
-                  </div>
-                  <div class="burger__wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50.646" height="12.5" viewBox="0 0 50.646 12.5" class="hamburger__svg-icon">
-                        <g data-name="Group 98">
-                            <path data-name="Line 39" transform="translate(0 .75)" style="fill:none;stroke:#fff;stroke-width:1.5px" d="M50.646 0H0"/>
-                            <path data-name="Line 40" transform="translate(0 11.75)" style="fill:none;stroke:#fff   ;stroke-width:1.5px" d="M40 0H0"/>
-                        </g>
-                    </svg>
+                <div class="header__container">
+                    <div class="header__logo--wrapper">
+                        <a href="index.html">
+                            <img src="./app/assets/logos/Sentinel-main-logo.svg" alt="" class="header__logo">
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="hamburger__line"></div>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list menu-items">
+                            <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+                            <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+                            <li class="nav__item"><a class="nav__link" href="consortium.html">Our Consortium</a></li>
+                            <li class="nav__item"><a class="nav__link" href="clients.html">Clients</a></li>
+                            <li class="nav__item"><a class="nav__link" href="vision.html">Vision</a></li>
+                            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                  <nav class="nav">
-                      <ul class="nav__list menu-items">
-                          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
-                          <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
-                          <li class="nav__item"><a class="nav__link" href="consortium.html">Our Consortium</a></li>
-                          <li class="nav__item"><a class="nav__link" href="clients.html">Clients</a></li>
-                          <li class="nav__item"><a class="nav__link" href="vision.html">Vision</a></li>
-                          <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
-                      </ul>
-                  </nav>
-              </div>
             </div>
         </div>
+        <!-- Dektop Menu end -->
 
+        <!-- Mobile Menu start -->
         <div class="header__mobile-wrapper">
             <div class="page-container">
                 <nav class="header__mobile-nav">
-                    <div class="close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20.896" height="27.704" viewBox="0 0 20.896 27.704">
-                            <g id="Group_138" data-name="Group 138" transform="translate(-564.378 -47.545)">
-                              <line id="Line_39" data-name="Line 39" x1="28" transform="matrix(0.695, -0.719, 0.719, 0.695, 564.918, 71.633)" fill="none" stroke="#fff" stroke-width="1.5"/>
-                              <line id="Line_40" data-name="Line 40" x1="13" y1="24" transform="translate(565.43 51.653) rotate(-16)" fill="none" stroke="#fff" stroke-width="1.5"/>
-                            </g>
-                          </svg>                              
-                    </div>
                     <ul class="nav__list header__nav-list">
                         <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
                         <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
@@ -68,20 +58,21 @@
                 </nav>
             </div>
         </div>
+        <!-- Mobile Menu end -->
     </header>
 
-    <main>
+    <main class="">
         <!-- hero start -->
         <section class="hero hero--about">
             <div class="page-container">
                 <div class="row">
                     <div class="col-12 col-lg-9 mx-auto text-center">
-                        <h1 class="text-white hero__heading underline u-blue u-offset">
+                        <h1 class="text-white hero__heading underline u-blue u-offset hero-animate-fade-up">
                             Get to know us
                         </h1>
                     </div>
                     <div class="col-12 col-lg-7 mt--2 mx-auto text-center">
-                        <p class="text-white sec__para">
+                        <p class="text-white sec__para hero-animate-fade">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,vero eos et accusam et justo duo dolores et ea                       
                         </p>
                     </div>
@@ -95,15 +86,15 @@
             <div class="page-container">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <h3 class="text-capitalize about--heading">
+                        <h3 class="text-capitalize about--heading animate-fade-in">
                             Our Vision Betterment of Community on All Levels Through Innovative and
                         </h3>
                     </div>
                     <div class="col-12 col-md-6 mt--1 mt--md--0">
-                        <p class="">
+                        <p class="animate-fade-in-up">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development services. But we like to see ourselves in Community service. Each of our companies is focused on helping make life easier. We are five specialist organizations working under one one principle: To Develop a Sustainable Society and a Vigorous Community.
                         </p>
-                        <p class="mt--1 mt--md--2">
+                        <p class="mt--1 mt--md--2 animate-fade-in-up">
                             With 30+ years of business experience, we have been standing front and center as the entity that gives best services to the communities. We work with Businesses, Municipalities, and Government Organizations to create Community-focused, Innovative, and Sustainable solutions.
                         </p>
                     </div>
@@ -112,8 +103,8 @@
         </div>
         <!-- Vision-Betterment end -->
 
-        <div class="page-container ">
-            <div class="seperator-line my--5 my--lg-12"></div>
+        <div class="page-container">
+            <div class="seperator-line my--5 my--lg-12 animate-fade-in"></div>
         </div>
       
         <!-- Team start -->
@@ -121,7 +112,7 @@
             <div class="page-container">
                 <div class="row">
                     <div class="col-12">
-                        <h3 class="text-capitalize about--heading">
+                        <h3 class="text-capitalize about--heading animate-fade-in">
                             our leadership team
                         </h3>
                     </div>
@@ -129,8 +120,8 @@
                 <div class="row mt--2 mt--md--4 mt--lg--8">
                     <div class="col-lg-3">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -140,8 +131,8 @@
                     </div>      
                     <div class="col-lg-3 mt--2 mt--md--0">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -151,8 +142,8 @@
                     </div>      
                     <div class="col-lg-3 mt--2 mt--md--0">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -162,8 +153,8 @@
                     </div>      
                     <div class="col-lg-3 mt--2 mt--md--0">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -175,8 +166,8 @@
                 <div class="row mt--2 mt--md--4 mt--lg--8">
                     <div class="col-lg-3">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -186,8 +177,8 @@
                     </div>      
                     <div class="col-lg-3 mt--2 mt--md--0">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -197,8 +188,8 @@
                     </div>      
                     <div class="col-lg-3 mt--2 mt--md--0">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -208,8 +199,8 @@
                     </div>      
                     <div class="col-lg-3 mt--2 mt--md--0">
                         <figure class="team__wrapper">
-                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid">
-                            <figcaption>
+                            <img src="./app/assets/img/about/team-bg.svg" alt="" class="img-fluid animate-fade-in">
+                            <figcaption class="animate-fade-in-up">
                                 <p class="sec__para">John Doe</p>
                                 <p class="mt--0">Director</p>
                                 <p class="mt--0">info@sentinel.com</p>
@@ -228,14 +219,14 @@
             <div class="page-container">
                <div class="row">
                 <div class="col-12 col-md-6">
-                    <h3 class="text-white fw--bold about--heading">
+                    <h3 class="text-white fw--bold about--heading animate-fade-in">
                         Our Vision Betterment of 
                         Community on All Levels 
                         Through Innovative and
                     </h3>
                 </div>
                 <div class="col-12 col-md-6 d-flex align-items-center justify-content-start justify-content-md-end mt--3 mt--md--0">
-                    <button class="btn btn--primary text-capitalize">
+                    <button class="btn btn--primary text-capitalize animate-fade-in-up">
                         book your free consultation
                     </button>
                 </div>
@@ -249,12 +240,12 @@
             <div class="page-container">
                 <div class="row">
                     <div class="col-12 col-md-10 col-lg-8">
-                        <h2 class="text-capitalize about--heading">
+                        <h2 class="text-capitalize about--heading animate-fade-in">
                             Rapid growth through an automation revolution
                         </h2>
                     </div>
                 </div>
-                <div class="row mt--3 mt--md--5 mt--lg--10 timeline">
+                <div class="row mt--3 mt--md--5 mt--lg--10 timeline animate-fade-in-up">
                     <div class="col-12 col-md-4 col-lg-3 timeline__wrapper">
                         <div class="timeline__content">
                             <span class="sec__para">june 2023</span>
@@ -290,20 +281,20 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <figure>
-                            <img src="./app/assets/img/jonathan-roger.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/jonathan-roger.webp" alt="" class="img-fluid img-scale">
                         </figure>
                     </div>
                     <div class="col-lg-6 offset-lg-1 mt--1 mt--md--0">
-                        <h2 class="text-capitalize about--heading">
+                        <h2 class="text-capitalize about--heading animate-fade-in">
                             Our Vision Betterment of Community on All Levels Through
                         </h2>
-                        <p class="">
+                        <p class="animate-fade-in-up">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development services. But we like to see ourselves in Community service. 
                         </p>
-                        <p class="mt--2">
+                        <p class="mt--2 animate-fade-in-up">
                             Each of our companies is focused on helping make life easier. We are five specialist organizations working under one one principle: To Develop a Sustainable Society and a Vigorous Community.
                         </p>
-                         <button class="btn btn--primary mt--2">Learn More</button>
+                         <button class="btn btn--primary mt--2 animate-fade-in-up">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -315,10 +306,10 @@
             <div class="page-container">
                <div class="row">
                 <div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
-                    <h3 class="text-white text-capitalize hero__heading">
+                    <h3 class="text-white text-capitalize hero__heading animate-fade-in">
                         <span class="underline u-white">Let’s Add Value</span> to Our Society
                     </h3>
-                    <button class="btn btn--secondary mt--3 mt--lg--5">Get Started</button>
+                    <button class="btn btn--secondary mt--3 mt--lg--5 animate-fade-in-up">Get Started</button>
                 </div>
                </div>
             </div>

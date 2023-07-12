@@ -16,46 +16,37 @@
          </div>
     </div>
     <header class="header">
+        <!-- Dektop Menu start -->
         <div class="header__desktop-wrapper">
             <div class="page-container">
-              <div class="header__container">
-                  <div class="header__logo--wrapper">
-                      <a href="index.html">
-                          <img src="./app/assets/logos/Sentinel-main-logo.svg" alt="Company's logo icon" class=" header__logo">
-                      </a>
-                  </div>
-                  <div class="burger__wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50.646" height="12.5" viewBox="0 0 50.646 12.5" class="hamburger__svg-icon">
-                        <g data-name="Group 98">
-                            <path data-name="Line 39" transform="translate(0 .75)" style="fill:none;stroke:#fff;stroke-width:1.5px" d="M50.646 0H0"/>
-                            <path data-name="Line 40" transform="translate(0 11.75)" style="fill:none;stroke:#fff   ;stroke-width:1.5px" d="M40 0H0"/>
-                        </g>
-                    </svg>
+                <div class="header__container">
+                    <div class="header__logo--wrapper">
+                        <a href="index.html">
+                            <img src="./app/assets/logos/Sentinel-main-logo.svg" alt="" class="header__logo">
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="hamburger__line"></div>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list menu-items">
+                            <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+                            <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+                            <li class="nav__item"><a class="nav__link" href="consortium.html">Our Consortium</a></li>
+                            <li class="nav__item"><a class="nav__link" href="clients.html">Clients</a></li>
+                            <li class="nav__item"><a class="nav__link" href="vision.html">Vision</a></li>
+                            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                  <nav class="nav">
-                      <ul class="nav__list menu-items">
-                          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
-                          <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
-                          <li class="nav__item"><a class="nav__link" href="consortium.html">Our Consortium</a></li>
-                          <li class="nav__item"><a class="nav__link" href="clients.html">Clients</a></li>
-                          <li class="nav__item"><a class="nav__link" href="vision.html">Vision</a></li>
-                          <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
-                      </ul>
-                  </nav>
-              </div>
             </div>
         </div>
+        <!-- Dektop Menu end -->
+        
+        <!-- Mobile Menu start -->
         <div class="header__mobile-wrapper">
             <div class="page-container">
                 <nav class="header__mobile-nav">
-                    <div class="close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20.896" height="27.704" viewBox="0 0 20.896 27.704">
-                            <g id="Group_138" data-name="Group 138" transform="translate(-564.378 -47.545)">
-                              <line id="Line_39" data-name="Line 39" x1="28" transform="matrix(0.695, -0.719, 0.719, 0.695, 564.918, 71.633)" fill="none" stroke="#fff" stroke-width="1.5"/>
-                              <line id="Line_40" data-name="Line 40" x1="13" y1="24" transform="translate(565.43 51.653) rotate(-16)" fill="none" stroke="#fff" stroke-width="1.5"/>
-                            </g>
-                          </svg>                              
-                    </div>
                     <ul class="nav__list header__nav-list">
                         <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
                         <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
@@ -67,6 +58,7 @@
                 </nav>
             </div>
         </div>
+        <!-- Mobile Menu end -->
     </header>
     <main>
         <!-- hero start -->
@@ -74,12 +66,12 @@
             <div class="page-container">
                 <div class="row">
                     <div class="col-12 col-lg-9 mx-auto text-center">
-                        <h1 class="text-white hero__heading underline u-blue u-offset">
+                        <h1 class="text-white hero__heading underline u-blue u-offset hero-animate-fade-up">
                             What we do
                         </h1>
                     </div>
                     <div class="col-12 col-lg-7 mt--2 mx-auto text-center">
-                        <p class="text-white">
+                        <p class="text-white hero-animate-fade">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,vero eos et accusam et justo duo dolores et ea                   
                         </p>
                     </div>
@@ -89,70 +81,70 @@
         <!-- hero end -->
 
         <!-- Services section start -->
-        <section class="services mt--7 mt--lg--12">
+        <section class="services mt--7 mt--lg--12 overflow-hidden">
             <div class="page-container">
                 <div class="row">
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 order-2 order-lg-0">
-                        <h3 class="hero__heading px--0">
+                        <h3 class="hero__heading px--0 animate-fade-in">
                             Vocational Apprentice Training
                         </h2>
-                        <p class="">
+                        <p class="animate-fade-in-up">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
                         </p>
-                        <button class="btn btn--primary mt--2 mt--lg-4">Learn More</button>
+                        <button class="btn btn--primary mt--2 mt--lg-4 animate-fade-in-up">Learn More</button>
                     </div>
                     <div class="col-12 col-lg-5 offset-lg-2">
-                        <figure>
-                            <img src="./app/assets/img/vocational-apprentice.webp" alt="" class="img-fluid">
+                        <figure class="">
+                            <img src="./app/assets/img/vocational-apprentice.webp" alt="" class="img-fluid img-animate-right">
                         </figure>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--10 mt--lg--23">
                     <div class="col-12 col-lg-5">
                         <figure>
-                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid img-animate-left">
                         </figure>
                     </div>
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 offset-lg-2">
-                        <h4 class="hero__heading px--0">
+                        <h4 class="hero__heading px--0 animate-fade-in">
                             QFI Management
                         </h4>
-                        <p class="">
+                        <p class="animate-fade-in-up">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
                         </p>
-                        <button class="btn btn--primary mt--2 mt--lg--4">Learn More</button>
+                        <button class="btn btn--primary mt--2 mt--lg--4 animate-fade-in-up">Learn More</button>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--15 mt--lg--25">
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 order-2 order-lg-0">
-                        <h4 class="hero__heading px--0">
+                        <h4 class="hero__heading px--0 animate-fade-in">
                             Development And Construction, Inc
                         </h4>
-                        <p class="">
+                        <p class="animate-fade-in-up">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
                         </p>
-                        <button class="btn btn--primary mt--2 mt--lg--4">Learn More</button>
+                        <button class="btn btn--primary mt--2 mt--lg--4 animate-fade-in-up">Learn More</button>
                     </div>
                     <div class="col-12 col-lg-5 offset-lg-2">
                         <figure>
-                            <img src="./app/assets/img/development-construction.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/development-construction.webp" alt="" class="img-fluid img-animate-right">
                         </figure>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--15 mt--lg--25">
                     <div class="col-12 col-lg-5">
                         <figure>
-                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid img-animate-left">
                         </figure>
                     </div>
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 offset-lg-2">
-                        <h4 class="hero__heading px--0">
+                        <h4 class="hero__heading px--0 animate-fade-in">
                             Our Chief <br>Representative
                         </h4>
-                        <p class="">
+                        <p class="animate-fade-in-up">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
                         </p>
-                        <button class="btn btn--primary mt--2 mt--lg--4">Learn More</button>
+                        <button class="btn btn--primary mt--2 mt--lg--4 animate-fade-in-up">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -160,21 +152,21 @@
         <!-- Services section end-->
 
         <!-- Steps section start -->
-        <section class="steps mt--5 mt--md--10 mt--lg--20">
+        <section class="steps mt--5 mt--md--10 mt--lg--20 overflow-hidden">
             <div class="page-container">
                 <div class="row">
                     <div class="col-lg-8 col-xl-6 g-0">
-                        <h3 class="hero__heading text-capitalize px--1">
+                        <h3 class="hero__heading text-capitalize px--1 animate-fade-in">
                             3 easy steps through an automation revolution
                         </h3>
                     </div>
                 </div>
                 <div class="row mt--3 mt--md--6 mt--lg--12">
                     <div class="col-12 col-lg-6">
-                        <ul class="steps__list">
+                        <ul class="steps__list animate-fade-in-up">
                             <div class="steps__progress" id="steps__progress"></div>
                             <li class="steps__item">
-                                <div class="steps__circle"></div> 
+                                <div class="steps__circle active"></div> 
                                 <h5 class="hero__heading text-capitalize steps__title active">
                                     Book An Appointment
                                 </h5>
@@ -194,7 +186,7 @@
                         </ul>
                     </div>
                     <div class="col-12 col-lg-6 mt--3 mt--lg--0">
-                        <p class="">
+                        <p class="slide-right">
                             We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
                         </p>
                     </div>
@@ -208,10 +200,10 @@
             <div class="page-container">
                <div class="row">
                 <div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
-                    <h3 class="text-white text-capitalize hero__heading">
+                    <h3 class="text-white text-capitalize hero__heading animate-fade-in">
                         <span class="underline u-white">Let’s Add Value</span> to Our Society
                     </h3>
-                    <button class="btn btn--secondary mt--3 mt--lg--5">Get Started</button>
+                    <button class="btn btn--secondary mt--3 mt--lg--5 animate-fade-in-up">Get Started</button>
                 </div>
                </div>
             </div>

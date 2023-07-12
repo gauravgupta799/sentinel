@@ -16,7 +16,19 @@
         }
     }
     &__logo{
-        height: rem(60);
+        height: rem(45);
+        @include breakpoint-sm{
+            height: rem(48);
+        }
+        @include breakpoint-md{
+            height: rem(52);
+        }
+        @include breakpoint-lg{
+            height: rem(54);
+        }
+        @include breakpoint-xl{
+            height: rem(60);
+        }
     }
     &__bottom{
         padding-block:em(16);
@@ -58,14 +70,16 @@
 
     &__social-link{
         @include transition(all, 0.4s, ease-in-out);
-        // width: rem(44);
-        // height: rem(44);
-        // background-color:$clr-secondary;
-        // padding: em(8);
-        // @include border-radius(50%);
-        // @include flex-center;
-
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: em(4);
         &:hover{
+             background: $clr-white;
+            @include transition(all, 0.4s, ease-in-out);
             svg{
                 @include transition(all, 0.4s, ease-in-out);
                 path{

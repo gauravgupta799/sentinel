@@ -8,12 +8,23 @@
     position: fixed;
     width: 100%;
     z-index: 999;
-    // padding-block:em(8);
     &__container{
         @include flex-space-between;
     }
     &__logo{
-        height: rem(60);
+        height: rem(45);
+        @include breakpoint-sm{
+            height: rem(48);
+        }
+        @include breakpoint-md{
+            height: rem(52);
+        }
+        @include breakpoint-lg{
+            height: rem(54);
+        }
+        @include breakpoint-xl{
+            height: rem(60);
+        }
     }
     &__logo--wrapper{
         padding-top: em(9);
@@ -59,26 +70,26 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        // height: 100vh;
         margin-top: rem(100);
     }
 }
 
-.burger__wrapper{
-    display: block;
-    @include breakpoint-lg{
-        display: none;
-    }
-    &:hover{
-        cursor: pointer;
-    }
-}
+// .burger__wrapper{
+//     display: block;
+//     @include breakpoint-lg{
+//         display: none;
+//     }
+//     &:hover{
+//         cursor: pointer;
+//     }
+// }
 
-.close-btn{
-    @include flex-center-vertical;
-    justify-content: flex-end;
-    margin-top: 10px;
-    &:hover{
-        cursor: pointer;
-    }
-}
+// .close-btn{
+//     @include flex-center-vertical;
+//     justify-content: flex-end;
+//     margin-top: 10px;
+//     &:hover{
+//         cursor: pointer;
+//     }
+// }
+

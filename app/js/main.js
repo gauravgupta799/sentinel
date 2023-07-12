@@ -2,8 +2,6 @@ const loader = document.querySelector(".page-loader");
 const header = document.querySelector(".header");
 const nav = document.querySelector(".nav");
 const mobileMenu = document.querySelector(".header__mobile-wrapper");
-const hamburgerBtn = document.querySelector(".burger__wrapper");
-const closeMenuBtn = document.querySelector(".close-btn");
 
 //====== Pre-loader start ======
 window.onload = () =>{
@@ -31,35 +29,26 @@ window.addEventListener("scroll", () => {
 });
 //====== Sticky header end ======
 
-hamburgerBtn.addEventListener("click", function(){
-  mobileMenu.classList.add("show-menu");
+const hamburger = document.querySelector(".hamburger");
+const hamburgerLine = document.querySelector(".hamburger__line");
+hamburger.addEventListener("click",()=>{
+  hamburgerLine.classList.toggle("active");
+  mobileMenu.classList.toggle("show-menu");
 })
-closeMenuBtn.addEventListener("click", function(){
-  mobileMenu.classList.remove("show-menu");
-})
-
 
 //====== Swiper start ======
-var swiper1 = new Swiper(".swiper-container-1", {
-  spaceBetween: 30,
-  grabCursor: true,
-  slidesPerView:1,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-});
-
-var swiper2 = new Swiper(".swiper-container-2", {
-  spaceBetween: 30,
-  grabCursor: true,
-  slidesPerView:1,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+const swiperContainerId = [1, 2];
+swiperContainerId.forEach((id)=>{
+  new Swiper(`.swiper-container-${id}`, {
+    spaceBetween: 30,
+    grabCursor: true,
+    slidesPerView:1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+})
 
 var swiper3 = new Swiper(".swiper-container-3", {
   spaceBetween: 20,
@@ -79,7 +68,6 @@ var swiper3 = new Swiper(".swiper-container-3", {
 });
 //====== Swiper end ======
 
-
 //====== Animation  start ======
 const tl = gsap.timeline();
 window.addEventListener("load", () => {
@@ -97,9 +85,12 @@ window.addEventListener("load", () => {
     ease: Power4.easeOut,
   });
 
-  tl.from(".hero-animate-fade-up", 0.35, {
+  tl.fromTo(".hero-animate-fade-up", {
     opacity: 0,
     y:-50,
+  },{
+    opacity: 1,
+    y:0,
     // delay:0.1,
     ease: Power4.easeOut,
   });
@@ -246,6 +237,7 @@ leftSlide.forEach((left, i) =>{
     trigger: left,
     animation: anim,
     toggleActions: "play",
+    delay:0.4,
     duration: 3,
     ease: Power4.easeInOut,
   });
@@ -260,6 +252,7 @@ rightSlide.forEach((right, i) =>{
     trigger: right,
     animation: anim,
     toggleActions: "play",
+    delay:0.6,
     duration: 3,
     ease: Power4.easeInOut,
   });
@@ -274,7 +267,6 @@ imgScale.forEach((img, i) =>{
     trigger: img,
     animation: anim,
     toggleActions: "play",
-    delay:0.5,
     stagger:0.1,
     ease: Power4.ease,
   });
@@ -333,8 +325,6 @@ $(window).scroll(function () {
   }
 });
 //====== Counter end ======
-
-
 
 
 // const progress = document.querySelector(".steps__progres");

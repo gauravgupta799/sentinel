@@ -303,3 +303,41 @@
         }
     }
 }
+
+.expertise-img-1{
+    width: rem(180);
+
+    @include breakpoint-sm{
+        width: rem(220);
+    }
+    @include breakpoint-md{
+        width: rem(260);
+    }
+}
+.expertise-img-2,
+.expertise-img-4,
+.expertise-img-5{
+    width: rem(120);
+    @include breakpoint-sm{
+        width: rem(160);
+    }
+    @include breakpoint-md{
+        width: rem(200);
+    }
+}
+.expertise-img-3{
+    width: rem(130);
+    @include breakpoint-sm{
+        width: rem(170);
+    }
+    @include breakpoint-md{
+        width: rem(210);
+    }
+}
+
+// .expertise-img-4{
+//     width: rem(120);
+// }
+// .expertise-img-5{
+//     width: rem(120);
+// }

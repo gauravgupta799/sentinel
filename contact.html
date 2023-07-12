@@ -16,46 +16,37 @@
          </div>
     </div>
     <header class="header">
+        <!-- Dektop Menu start -->
         <div class="header__desktop-wrapper">
             <div class="page-container">
-              <div class="header__container">
-                  <div class="header__logo--wrapper">
-                      <a href="index.html">
-                          <img src="./app/assets/logos/Sentinel-main-logo.svg" alt="Company's logo icon" class=" header__logo">
-                      </a>
-                  </div>
-                  <div class="burger__wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50.646" height="12.5" viewBox="0 0 50.646 12.5" class="hamburger__svg-icon">
-                        <g data-name="Group 98">
-                            <path data-name="Line 39" transform="translate(0 .75)" style="fill:none;stroke:#fff;stroke-width:1.5px" d="M50.646 0H0"/>
-                            <path data-name="Line 40" transform="translate(0 11.75)" style="fill:none;stroke:#fff   ;stroke-width:1.5px" d="M40 0H0"/>
-                        </g>
-                    </svg>
+                <div class="header__container">
+                    <div class="header__logo--wrapper">
+                        <a href="index.html">
+                            <img src="./app/assets/logos/Sentinel-main-logo.svg" alt="" class="header__logo">
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="hamburger__line"></div>
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list menu-items">
+                            <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
+                            <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
+                            <li class="nav__item"><a class="nav__link" href="consortium.html">Our Consortium</a></li>
+                            <li class="nav__item"><a class="nav__link" href="clients.html">Clients</a></li>
+                            <li class="nav__item"><a class="nav__link" href="vision.html">Vision</a></li>
+                            <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
                 </div>
-                  <nav class="nav">
-                      <ul class="nav__list menu-items">
-                          <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
-                          <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
-                          <li class="nav__item"><a class="nav__link" href="consortium.html">Our Consortium</a></li>
-                          <li class="nav__item"><a class="nav__link" href="clients.html">Clients</a></li>
-                          <li class="nav__item"><a class="nav__link" href="vision.html">Vision</a></li>
-                          <li class="nav__item"><a class="nav__link" href="contact.html">Contact</a></li>
-                      </ul>
-                  </nav>
-              </div>
             </div>
         </div>
+        <!-- Dektop Menu end -->
+        
+        <!-- Mobile Menu start -->
         <div class="header__mobile-wrapper">
             <div class="page-container">
                 <nav class="header__mobile-nav">
-                    <div class="close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20.896" height="27.704" viewBox="0 0 20.896 27.704">
-                            <g id="Group_138" data-name="Group 138" transform="translate(-564.378 -47.545)">
-                              <line id="Line_39" data-name="Line 39" x1="28" transform="matrix(0.695, -0.719, 0.719, 0.695, 564.918, 71.633)" fill="none" stroke="#fff" stroke-width="1.5"/>
-                              <line id="Line_40" data-name="Line 40" x1="13" y1="24" transform="translate(565.43 51.653) rotate(-16)" fill="none" stroke="#fff" stroke-width="1.5"/>
-                            </g>
-                          </svg>                              
-                    </div>
                     <ul class="nav__list header__nav-list">
                         <li class="nav__item"><a class="nav__link" href="index.html">Home</a></li>
                         <li class="nav__item"><a class="nav__link" href="about.html">About</a></li>
@@ -67,18 +58,20 @@
                 </nav>
             </div>
         </div>
+        <!-- Mobile Menu end -->
     </header>
+
     <main>
         <!-- hero start -->
         <section class="hero hero--about">
             <div class="page-container">
                 <div class="row">
                     <div class="col-12 col-lg-9 mx-auto text-center">
-                        <h1 class="text-white hero__heading underline u-blue u-offset">
+                        <h1 class="text-white hero__heading underline u-blue u-offset hero-animate-fade-up ">
                             Contact us
                         </h1>
                     </div>
-                    <div class="col-12 col-lg-7 mt--2 mx-auto text-center">
+                    <div class="col-12 col-lg-7 mt--2 mx-auto text-center hero-animate-fade">
                         <p class="text-white sec__para">
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,vero eos et accusam et justo duo dolores et ea                   
                         </p>
@@ -95,58 +88,53 @@
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
                            <div class="form-group">
-                                <h6 class="">What's Your Name</h6>
+                                <h6 class="animate-fade-in">What's Your Name</h6>
                                 <input type="text" 
-                                name="name" value="" class=""
+                                name="name" value="" class="animate-fade-in-up"
                                 placeholder="Type Your Name"
                                 >
                            </div>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
-                            <h6 class="">Email Address</h6>
+                            <h6 class="animate-fade-in">Email Address</h6>
                             <input type="email" 
-                            name="email" value="" class=""
+                            name="email" value="" class="animate-fade-in-up"
                             placeholder="example@gmail.com"
                             >
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
-                            <h6 class="">Website URL</h6>
+                            <h6 class="animate-fade-in">Website URL</h6>
                             <input type="url" 
-                            name="url" value="" class=""
+                            name="url" value="" class="animate-fade-in-up"
                             placeholder="example.com"
                             >
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
-                            <h6 class="">Your Current Budget</h6>
-                            <div class="budget-btn-wrapper mt--1 mt--md--2">
-                                <div class="radio-btn-wrapper">
-                                    <input type="radio" class="btn--radio" name="budget-btn"/>
-                                    <label for="">under 5k</label>
-                                </div>
-                                <div class="radio-btn-wrapper">
-                                    <input type="radio" class="btn--radio" name="budget-btn"/>
-                                    <label for="">under 5k</label>
-                                </div>
-                                <div class="radio-btn-wrapper">
-                                    <input type="radio" class="btn--radio" name="budget-btn"/>
-                                    <label for="">under 5k</label>
-                                </div>
-                                <div class="radio-btn-wrapper">
-                                    <input type="radio" class="btn--radio" name="budget-btn"/>
-                                    <label for="">under 5k</label>
-                                </div>                        
+                            <h6 class="animate-fade-in">Your Current Budget</h6>
+                            <div class="radio mt--1 mt--md--2 animate-fade-in-up">
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio1"/>
+                                <label for="radio1" class="radio__label">under 5k</label>
+
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio2"/>
+                                <label for="radio2" class="radio__label">under 5k</label>
+
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio3"/>
+                                <label for="radio3" class="radio__label">under 5k</label>
+
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio4"/>
+                                <label for="radio4" class="radio__label">under 5k</label>                    
                             </div>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
-                            <h6 class="">Any Comment Here</h6>                         
+                            <h6 class="animate-fade-in">Any Comment Here</h6>                         
                             <input type="text" name="comment" id=""
-                            placeholder="Write any notes here" class="mt--1 mt--lg--2"></input>
+                            placeholder="Write any notes here" class="mt--1 mt--lg--2 animate-fade-in-up"></input>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-10">
-                            <div class="btn-wrapper">
+                            <div class="btn-wrapper animate-fade-in-up">
                                 <button class="btn btn--primary mt--3 mt--lg--6 mt--xl--9">
                                     Get Started With Sentinel
                                 </button>
@@ -160,7 +148,7 @@
 
         <!-- Map section start -->
         <section class="map mt--5 mt--lg--7">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.631819548038!2d81.01337552985322!3d26.851660366563923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2e3c53970a5%3A0x41e45a5880832eee!2sVirat%20Khand%2C%20Gomti%20Nagar%2C%20Lucknow%2C%20Uttar%20Pradesh%20226010!5e0!3m2!1sen!2sin!4v1688566092109!5m2!1sen!2sin" width="100%" height="950" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.631819548038!2d81.01337552985322!3d26.851660366563923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399be2e3c53970a5%3A0x41e45a5880832eee!2sVirat%20Khand%2C%20Gomti%20Nagar%2C%20Lucknow%2C%20Uttar%20Pradesh%20226010!5e0!3m2!1sen!2sin!4v1688566092109!5m2!1sen!2sin" width="100%" height="950" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" loading="lazy" class=" img-scale">
             </iframe>  
         </section>
         <!-- Map section end -->
@@ -170,12 +158,12 @@
             <div class="page-container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <address class="sec__para">
+                        <address class="sec__para animate-fade-in-up">
                             <p class="sec__para">12 E 3rd Street</p> 
                             <span>​MT. Vernon, NY 10550  </span>                     
                         </address>
                     </div>
-                    <div class="col-lg-4 mt--1 mt--lg--0 sec__para">                 
+                    <div class="col-lg-4 mt--1 mt--lg--0 sec__para animate-fade-in-up">                 
                         <p class="sec__para">
                             <a href="tel:(914) 699-2210" class="clr-primary">(914) 699-2210</a>
                         </p>
@@ -183,8 +171,8 @@
                             <a href="mailto:info@sentinel.com" class="clr-primary">info@sentinel.com</a>
                         </p>
                     </div>
-                    <div class="col-lg-4 mt--1 mt--lg--0 ">
-                        <p class="sec__para">
+                    <div class="col-lg-4 mt--1 mt--lg--0 animate-fade-in-up">
+                        <p class="sec__para ">
                             <a href="www.facebook.com" class="clr-primary">info@sentinel.com</a>
                         </p>
                        <p class="sec__para mt--0 mt--lg--1">
@@ -201,10 +189,10 @@
             <div class="page-container">
                <div class="row">
                 <div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
-                    <h3 class="text-white text-capitalize hero__heading">
+                    <h3 class="text-white text-capitalize hero__heading  animate-fade-in">
                         <span class="underline u-white">Let’s Add Value</span> to Our Society
                     </h3>
-                    <button class="btn btn--secondary mt--3 mt--lg--5">Get Started</button>
+                    <button class="btn btn--secondary mt--3 mt--lg--5 animate-fade-in-up">Get Started</button>
                 </div>
                </div>
             </div>
@@ -319,16 +307,6 @@
         </div>
     </footer>
     <!-- footer end -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script> -->
     <script src="./dist/bundle.min.js"></script>
-
-    <!-- <script>
-        TweenMax.staggerFrom(".nav__item ", 1.5, {
-            delay:0,
-            opacity:0,
-            y:-50,
-            ease:Expo.easeInOut,
-        },0.08);
-    </script> -->
 </body>
 </html>

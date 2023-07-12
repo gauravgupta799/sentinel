@@ -10,25 +10,44 @@
     font-size:rem(16);
     padding: em(14) em(36);
     color:$clr-white;
+    position: relative;
+    overflow: hidden;
+
     &:hover{
         cursor: pointer;
     }
-    @include breakpoint-sm{
-        padding: em(18) em(44);
-    }
     @include breakpoint-md{
-        padding: em(23) em(56);
+        font-size:rem(18);
     }
 }
 
+
 .btn--primary{
     background-color:$clr-secondary;
+    border:2px solid $clr-secondary;
+
+    &:hover{
+        @include transition(all, 0.5s, ease);
+        background: transparent;
+        border-color: $clr-secondary;
+        color:$clr-secondary;
+    }
 }
+
 
 .btn--secondary{
     background-color:$clr-white;
     color:$clr-secondary;
+    border:2px solid $clr-white;
+ 
+    &:hover{
+        background: transparent;
+        color:$clr-white;
+        @include transition(all, 0.5s, ease);
+    }
 }
+
+
 
 .btn--transparent{
     background: transparent;
@@ -39,11 +58,6 @@
 }
 
 .btn--transparent:hover{
-    background:$clr-primary;
-    color:$clr-white;
-}
-
-.btn-active{
     background:$clr-primary;
     color:$clr-white;
 }

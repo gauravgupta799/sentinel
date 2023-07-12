@@ -12,7 +12,6 @@
     @include breakpoint-lg{
         padding-block: em(235) em(310);
     }
-
     &__list{
         display: flex;
         flex-direction: column;
@@ -33,44 +32,44 @@
             transition:all 0.4s ease;
         }
     }
-
     &__progress{
         background-color: $clr-secondary;
         position: absolute;
         left: 25px;
         width: 3px;
-        height: 0%;
+        height: 50%;
         z-index: -1;
         transition:all 0.4s ease;
     }
     &__item{
         @include flex-center-vertical;
     }
-
     &__circle{
         background: $clr-athens-gray;
         position: relative;
-        width: rem(50);
-        height: rem(50);
+        width: rem(52);
+        height: rem(52);
         line-height: 1.5em;
         border:1px solid $clr-black;
         margin-right: rem(25);
         @include border-radius(50%);
         @include flex-center;
         cursor: pointer;
+        &:nth-of-type(1){
+            margin-top: -2px;
+        }
         &.active{
             border-color: $clr-secondary;
             &::after{
                 content:"";
                 position: absolute;
-                width: rem(25);
-                height: rem(25);
+                width: rem(26);
+                height: rem(26);
                 @include border-radius(50%);
                 background-color: $clr-secondary;    
             }
         } 
     }
-
     &__title{
         opacity: 0.6;
 
