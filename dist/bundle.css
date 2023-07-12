@@ -13880,16 +13880,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   transition: all 0.5s ease;
 }
 
-.btn--transparent {
-  background: transparent;
-  border: 1px solid #192544;
-  color: #192544;
-  padding: 0.9375em 2.625em;
-  transition: 0.5s ease-in-out ease;
-}
-
-.btn--transparent:hover {
-  background: #192544;
+.btn--hover:hover {
+  transition: all 0.5s ease;
+  border-color: #fff;
   color: #fff;
 }
 

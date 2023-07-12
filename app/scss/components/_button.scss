@@ -48,16 +48,25 @@
 }
 
 
+// .btn--transparent{
+//     background: transparent;
+//     border:1px solid $clr-primary;
+//     color:$clr-primary;
+//     padding:em(15) em(42);
+//     @include transition(0.5s, ease-in-out);
+// }
 
-.btn--transparent{
-    background: transparent;
-    border:1px solid $clr-primary;
-    color:$clr-primary;
-    padding:em(15) em(42);
-    @include transition(0.5s, ease-in-out);
+// .btn--transparent:hover{
+//     background:$clr-primary;
+//     color:$clr-white;
+// }
+
+.btn--hover{
+    &:hover{
+        @include transition(all, 0.5s, ease);
+        border-color: $clr-white;
+        color:$clr-white;
+    }
 }
 
-.btn--transparent:hover{
-    background:$clr-primary;
-    color:$clr-white;
-}
+
