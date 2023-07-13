@@ -89,53 +89,44 @@
                         <div class="col-lg-8 mx-auto">
                            <div class="form-group">
                                 <h6 class="animate-fade-in">What's Your Name</h6>
-                                <input type="text" 
-                                name="name" value="" class="animate-fade-in-up"
-                                placeholder="Type Your Name"
-                                >
+                                <input type="text" name="name" value="" class="animate-fade-in-up" placeholder="Type Your Name"
+                                oninvalid="this.setCustomValidity('Please enter your name');" required>
                            </div>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Email Address</h6>
-                            <input type="email" 
-                            name="email" value="" class="animate-fade-in-up"
-                            placeholder="example@gmail.com"
-                            >
+                            <input type="email" name="email" value="" class="animate-fade-in-up" placeholder="example@gmail.com" oninvalid="this.setCustomValidity('Please enter your email');" required>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Website URL</h6>
-                            <input type="url" 
-                            name="url" value="" class="animate-fade-in-up"
-                            placeholder="example.com"
-                            >
+                            <input type="url" name="url" value="" class="animate-fade-in-up" placeholder="example.com" oninvalid="this.setCustomValidity('Please enter your email');" required>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Your Current Budget</h6>
                             <div class="radio mt--1 mt--md--2 animate-fade-in-up">
-                                <input type="radio" class="radio__input" name="budget-btn" id="radio1"/>
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio1" value=""/>
                                 <label for="radio1" class="radio__label">under 5k</label>
 
-                                <input type="radio" class="radio__input" name="budget-btn" id="radio2"/>
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio2" value=""/>
                                 <label for="radio2" class="radio__label">under 5k</label>
 
-                                <input type="radio" class="radio__input" name="budget-btn" id="radio3"/>
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio3" value=""/>
                                 <label for="radio3" class="radio__label">under 5k</label>
 
-                                <input type="radio" class="radio__input" name="budget-btn" id="radio4"/>
+                                <input type="radio" class="radio__input" name="budget-btn" id="radio4" value=""/>
                                 <label for="radio4" class="radio__label">under 5k</label>                    
                             </div>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Any Comment Here</h6>                         
-                            <input type="text" name="comment" id=""
-                            placeholder="Write any notes here" class="mt--1 mt--lg--2 animate-fade-in-up"></input>
+                            <input type="text" name="comment" id="" value="" placeholder="Write any notes here" class="mt--1 mt--lg--2 animate-fade-in-up"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-10">
                             <div class="btn-wrapper animate-fade-in-up">
-                                <button class="btn btn--primary mt--3 mt--lg--6 mt--xl--9">
+                                <button class="btn btn--primary mt--3 mt--lg--6 mt--xl--9" id="submit" type="submit">
                                     Get Started With Sentinel
                                 </button>
                             </div>

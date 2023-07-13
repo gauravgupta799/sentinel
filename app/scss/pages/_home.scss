@@ -43,7 +43,6 @@
             left: -10px;
             bottom: -15px;
             z-index: -1;
-
             @include breakpoint-md{
                 left: -58px;
                 bottom: -50px;
@@ -174,6 +173,14 @@
             background-image: url("./../app/assets/img/canterbury-bg.svg");
             @include background-cover;
         }
+        &:hover{
+            cursor: pointer;
+            @include transition(all, 0.4s, ease);
+            &::after{
+                @include transition(all, 0.4s, ease);
+                background-image: none;
+            }
+        }
     }
     &__figcaption{
         position: absolute;
@@ -196,16 +203,22 @@
     &__thumbnail{
         // position: relative;
         overflow: hidden;
-        // z-index: 1;
         &::before{
             content: url("./../app/assets/img/clip-img/Path-3.svg");
             position: absolute;
             z-index: -1;
-            // right: 500px;
-            // top: 90px;
-            margin-top: rem(-35);
-            margin-left: rem(105);
+            margin-top: rem(-20);
+            margin-left: rem(90);
+
+            @include breakpoint-sm{
+                margin-top: rem(-25);
+                margin-left: rem(95);
             }
+            @include breakpoint-md{
+                margin-top: rem(-35);
+                margin-left: rem(105);
+            }
+        }
     }
 }
 
@@ -306,7 +319,6 @@
 
 .expertise-img-1{
     width: rem(180);
-
     @include breakpoint-sm{
         width: rem(220);
     }
@@ -314,6 +326,7 @@
         width: rem(260);
     }
 }
+
 .expertise-img-2,
 .expertise-img-4,
 .expertise-img-5{
@@ -325,6 +338,7 @@
         width: rem(200);
     }
 }
+
 .expertise-img-3{
     width: rem(130);
     @include breakpoint-sm{
@@ -335,9 +349,27 @@
     }
 }
 
-// .expertise-img-4{
-//     width: rem(120);
-// }
-// .expertise-img-5{
-//     width: rem(120);
-// }
+.slide-brands{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.slide-img{
+    width: inherit;
+    @include flex-center;
+    gap: rem(64);
+    @include transition(all, 0.5s, ease);
+    animation: scroll 20s linear infinite;
+    -webkit-animation: scroll 20s linear infinite forwards;
+}
+
+@keyframes scroll{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+

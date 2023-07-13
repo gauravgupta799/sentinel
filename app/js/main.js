@@ -10,10 +10,11 @@ window.onload = () =>{
 //====== Pre-loader end ======
 
 //======  Active Page Link start ======
-const activePage = window.location.pathname;
+const windowPathname = window.location.pathname;
 const navLinks = document.querySelectorAll(".nav__link");
 navLinks.forEach(link =>{
-  if(link.href.includes(`${activePage }`)){
+  const navLinkPathname = new URL(link.href).pathname;
+  if((windowPathname === navLinkPathname) || (windowPathname === "/index.html" && navLinkPathname === "/")){
     link.classList.add("active");
   }
 })
@@ -272,7 +273,6 @@ imgScale.forEach((img, i) =>{
   });
 })
 //====== Animation End ======
-
 
 //====== Counter start ======
 function visible(partial) {

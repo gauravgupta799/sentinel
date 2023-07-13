@@ -44,12 +44,21 @@
                 transform:scaleX(1);
             }
         }
-        &.active{
-            color:$clr-secondary;
-            &::after{
-                transform:scaleX(1);
-            }
-        }   
+        // &.active{
+        //     color:$clr-secondary;
+        //     &::after{
+        //         transform:scaleX(1);
+        //     }
+        // }   
     }
 }
+
+.active{
+    color:$clr-secondary;
+    &.nav__link{
+        &::after{
+            transform:scaleX(1);
+        }
+    }
+} 
 
