@@ -125,10 +125,12 @@
 .rectangle-bg--left{
     background-image:url("./../app/assets/img/rectangle-bg.webp");
     background-repeat: no-repeat;
-    padding-block: 80px;
+    // padding-block: 80px;
+    padding-block:em(80);
     @include breakpoint-lg{
         background-position:-80%;
-        padding-block:80px 200px;
+        // padding-block:80px 200px;
+        padding-block:em(80) em(200);
         margin-top: rem(140);
     }
     @include breakpoint-xxl{
@@ -246,7 +248,6 @@
         left: 56%;
         transform: translate(-50%,-50%);
         z-index: -1;
-
         @include breakpoint-xxl{
             top: 40%;
         }

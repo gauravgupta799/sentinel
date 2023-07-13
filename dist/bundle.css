@@ -14161,12 +14161,12 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .rectangle-bg--left {
   background-image: url("./../app/assets/img/rectangle-bg.webp");
   background-repeat: no-repeat;
-  padding-block: 80px;
+  padding-block: 5em;
 }
 @media only screen and (min-width: 62em) {
   .rectangle-bg--left {
     background-position: -80%;
-    padding-block: 80px 200px;
+    padding-block: 5em 12.5em;
     margin-top: 8.75rem;
   }
 }
@@ -14458,8 +14458,13 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   position: absolute;
   top: -60px;
   transform: rotate(90deg);
-  right: 16px;
+  right: 5px;
   z-index: -1;
+}
+@media only screen and (min-width: 36em) {
+  .consultation::before {
+    right: 15px;
+  }
 }
 
 .revolution {

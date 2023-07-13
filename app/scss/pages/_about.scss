@@ -20,8 +20,12 @@
         position: absolute;
         top: -60px;
         transform: rotate(90deg);
-        right: 16px;
+        right: 5px;
         z-index: -1;
+
+        @include breakpoint-sm{
+            right: 15px;
+        }
     }
 }
 
