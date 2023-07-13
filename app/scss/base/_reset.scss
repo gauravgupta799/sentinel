@@ -101,10 +101,6 @@ textarea{
   resize: none;
 }
 
-::placeholder{
-  font-family: 'Poppins';
-}
-
 ::selection{
   background:$clr-primary;
   color:$clr-white;

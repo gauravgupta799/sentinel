@@ -40,22 +40,13 @@
     gap:1rem;
     flex-wrap: wrap;
     overflow: hidden;
-
     &__input{
         display: none;
-
-        // &:checked{
-        //     &.radio__label{
-        //         background-color:$clr-primary;
-        //     }
-        // }
     }
-
     &__label{
         border:1px solid $clr-primary;
         padding: em(12) em(40);
         @include transition(all, 0.5s, ease-in-out);
-
         &:hover{
             cursor: pointer;
             background-color: $clr-primary;
@@ -64,8 +55,11 @@
     }
 }
 
-
 .radio__input:checked + .radio__label{
     background-color:$clr-primary;
     color:$clr-white;
 }
+
+::placeholder{
+    font-family: 'Poppins';
+  }

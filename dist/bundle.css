@@ -119,14 +119,6 @@ textarea {
   resize: none;
 }
 
-::-moz-placeholder {
-  font-family: "Poppins";
-}
-
-::placeholder {
-  font-family: "Poppins";
-}
-
 ::-moz-selection {
   background: #192544;
   color: #fff;
@@ -14962,6 +14954,14 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .radio__input:checked + .radio__label {
   background-color: #192544;
   color: #fff;
+}
+
+::-moz-placeholder {
+  font-family: "Poppins";
+}
+
+::placeholder {
+  font-family: "Poppins";
 }
 
 .swiper-pagination {
