@@ -88,18 +88,18 @@
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
                            <div class="form-group">
-                                <h6 class="animate-fade-in">What's Your Name</h6>
-                                <input type="text" name="name" value="" class="animate-fade-in-up" placeholder="Type Your Name"
+                                <h6 class="animate-fade-in">What's Your Name?</h6>
+                                <input type="text" name="name" value="" class="form-control animate-fade-in-up" placeholder="Type Your Name"
                                 oninvalid="this.setCustomValidity('Please enter your name');" required>
                            </div>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Email Address</h6>
-                            <input type="email" name="email" value="" class="animate-fade-in-up" placeholder="example@gmail.com" oninvalid="this.setCustomValidity('Please enter your email');" required>
+                            <input type="email" name="email" value="" class="form-control animate-fade-in-up" placeholder="example@gmail.com" oninvalid="this.setCustomValidity('Please enter your email');" required>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Website URL</h6>
-                            <input type="url" name="url" value="" class="animate-fade-in-up" placeholder="example.com" oninvalid="this.setCustomValidity('Please enter your email');" required>
+                            <input type="url" name="url" value="" class="form-control animate-fade-in-up" placeholder="example.com" oninvalid="this.setCustomValidity('Please enter your email');" required>
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Your Current Budget</h6>
@@ -119,14 +119,14 @@
                         </div>
                         <div class="col-lg-8 mx-auto mt--2 mt--lg--5">
                             <h6 class="animate-fade-in">Any Comment Here</h6>                         
-                            <input type="text" name="comment" id="" value="" placeholder="Write any notes here" class="mt--1 mt--lg--2 animate-fade-in-up"/>
+                            <input type="text" name="comment" id="" value="" placeholder="Write any notes here" class="form-control animate-fade-in-up"/>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-10">
                             <div class="btn-wrapper animate-fade-in-up">
-                                <button class="btn btn--primary mt--3 mt--lg--6 mt--xl--9" id="submit" type="submit">
+                                <button class="btn btn--primary mt--3 mt--lg--6 mt--xxl--8" id="submit" type="submit">
                                     Get Started With Sentinel
                                 </button>
                             </div>
@@ -145,29 +145,32 @@
         <!-- Map section end -->
 
         <!-- Address section start -->
-        <section class="address my--3 my--lg--7 my--xl--12">
+        <section class="contact-details my--3 my--lg--7 my--xl--12">
             <div class="page-container">
                 <div class="row">
                     <div class="col-lg-4">
-                        <address class="sec__para animate-fade-in-up">
-                            <p class="sec__para">12 E 3rd Street</p> 
-                            <span>​MT. Vernon, NY 10550  </span>                     
-                        </address>
+                        <a href="#" class="sec__para ">
+                            <address class="clr-primary contact-details__link animate-fade-in-up">
+                                12 E 3rd Street <br>
+                                ​MT. Vernon, NY <br>
+                                10550 
+                            </address>                          
+                        </a>                                                        
                     </div>
                     <div class="col-lg-4 mt--1 mt--lg--0 sec__para animate-fade-in-up">                 
                         <p class="sec__para">
-                            <a href="tel:(914) 699-2210" class="clr-primary">(914) 699-2210</a>
+                            <a href="tel:(914) 699-2210" class="clr-primary contact-details__link">(914) 699-2210</a>
                         </p>
                         <p class="sec__para mt--0 mt--lg--1">
-                            <a href="mailto:info@sentinel.com" class="clr-primary">info@sentinel.com</a>
+                            <a href="mailto:info@sentinel.com" class="clr-primary contact-details__link">info@sentinel.com</a>
                         </p>
                     </div>
                     <div class="col-lg-4 mt--1 mt--lg--0 animate-fade-in-up">
-                        <p class="sec__para ">
-                            <a href="www.facebook.com" class="clr-primary">info@sentinel.com</a>
+                        <p class="sec__para">
+                            <a href="www.facebook.com" class="clr-primary contact-details__link">Facebook</a>
                         </p>
                        <p class="sec__para mt--0 mt--lg--1">
-                        <a href="www.instagram.com" class="clr-primary">instagram</a>
+                        <a href="www.instagram.com" class="clr-primary contact-details__link">Instagram</a>
                        </p>
                     </div>
                 </div>
@@ -179,7 +182,7 @@
         <section class="add-value">
             <div class="page-container">
                <div class="row">
-                <div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
+                <div class="col-12 col-md-8 col-lg-5 col-xl-4 mx-auto text-center">
                     <h3 class="text-white text-capitalize hero__heading  animate-fade-in">
                         <span class="underline u-white">Let’s Add Value</span> to Our Society
                     </h3>

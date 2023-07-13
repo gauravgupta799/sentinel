@@ -4,13 +4,14 @@
 @use "../abstract/mixins" as *;
 
 
-input, textarea{
+.form-control{
     outline:none;
     border:none;
     border-bottom: 1px solid #bbb;
     width: 766px;
     max-width: 90%;
     font-size: rem(16);
+    padding-block: em(12);
     @include breakpoint-md{
         font-size: rem(18);
     }
@@ -21,23 +22,13 @@ input, textarea{
         font-size: rem(24);
     }
 }
-input{
-    padding-block: 12px;
-}
+// input{
+//     padding-block: 12px;
+// }
 
-textarea{
-    resize: none;
-}
-
-::placeholder{
-    font-family: 'Poppins';
-}
-
-input:focus, 
-textarea:focus{
+.form-control:focus{
     border-color: $clr-primary;
     @include transition(0.5s, ease-in);
-
     &::placeholder{
         opacity: 0;
     }
@@ -69,8 +60,7 @@ textarea:focus{
             cursor: pointer;
             background-color: $clr-primary;
             color:$clr-white;
-        }
-        
+        } 
     }
 }
 

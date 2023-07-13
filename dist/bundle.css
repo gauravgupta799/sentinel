@@ -115,6 +115,18 @@ h6 {
   font-size: 100%;
 }
 
+textarea {
+  resize: none;
+}
+
+::-moz-placeholder {
+  font-family: "Poppins";
+}
+
+::placeholder {
+  font-family: "Poppins";
+}
+
 ::-moz-selection {
   background: #192544;
   color: #fff;
@@ -14752,17 +14764,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   gap: 1rem;
 }
 
-.radio-btn-wrapper {
-  display: flex;
-  height: 60px;
-  width: 180px;
-  border: solid 1px #192544;
-  background-color: #fff;
-  justify-content: center;
-}
-
-.btn--radio {
-  background: transparent;
+.contact-details__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .nav {
@@ -14898,56 +14902,39 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   margin-top: 6.25rem;
 }
 
-input, textarea {
+.form-control {
   outline: none;
   border: none;
   border-bottom: 1px solid #bbb;
   width: 766px;
   max-width: 90%;
   font-size: 1rem;
+  padding-block: 0.75em;
 }
 @media only screen and (min-width: 48em) {
-  input, textarea {
+  .form-control {
     font-size: 1.125rem;
   }
 }
 @media only screen and (min-width: 62em) {
-  input, textarea {
+  .form-control {
     font-size: 1.25rem;
   }
 }
 @media only screen and (min-width: 100em) {
-  input, textarea {
+  .form-control {
     font-size: 1.5rem;
   }
 }
 
-input {
-  padding-block: 12px;
-}
-
-textarea {
-  resize: none;
-}
-
-::-moz-placeholder {
-  font-family: "Poppins";
-}
-
-::placeholder {
-  font-family: "Poppins";
-}
-
-input:focus,
-textarea:focus {
+.form-control:focus {
   border-color: #192544;
   transition: 0.5s ease-in ease;
 }
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+.form-control:focus::-moz-placeholder {
   opacity: 0;
 }
-input:focus::placeholder,
-textarea:focus::placeholder {
+.form-control:focus::placeholder {
   opacity: 0;
 }
 
