@@ -14809,11 +14809,10 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .nav__link:hover::after {
   transform: scaleX(1);
 }
-
-.active {
+.nav__link.active {
   color: #3965dd;
 }
-.active.nav__link::after {
+.nav__link.active.nav__link::after {
   transform: scaleX(1);
 }
 
