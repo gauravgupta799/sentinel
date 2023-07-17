@@ -44,7 +44,7 @@ swiperContainerId.forEach((id)=>{
     spaceBetween: 30,
     grabCursor: true,
     slidesPerView:1,
-    pagination: {
+   pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
@@ -67,61 +67,70 @@ var swiper3 = new Swiper(".swiper-container-3", {
     }
   }
 });
+
+
+var swiper4 = new Swiper(".swiper-container-4", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    548:{
+      slidesPerView: 1,
+    },
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 2.5,
+    },
+    1024: {
+      slidesPerView: 3.5,
+    },
+  },
+});
 //====== Swiper end ======
 
 //====== Animation  start ======
 const tl = gsap.timeline();
 window.addEventListener("load", () => {
-  tl.from(".header__logo",{
-    delay:0,
-    opacity:1,
+  tl.from(".header__logo , .nav__item",{
+    opacity:0,
     y:-50,
-    ease: Power4.easeOut,
-  });
-  tl.from(".nav__item",{
-    delay:0,
-    opacity:1,
-    stagger:0.1,
-    y:-60,
-    ease: Power4.easeOut,
+    stagger:0.04,
+    ease: Power4.ease,
   });
 
-  tl.fromTo(".hero-animate-fade-up", {
+  tl.from(".hero-animate-fade-up", {
     opacity: 0,
-    y:-50,
-  },{
-    opacity: 1,
-    y:0,
-    // delay:0.1,
-    ease: Power4.easeOut,
+    scale:1.5,
+    duration:0.5,
+    ease: Power4.ease,
   });
   
-  tl.fromTo(".hero-animate-fade",{
-    opacity: 0,
-    x:-100,
-  },{
-    opacity:1,
-    x:0,
-    // duration:0.45,
-    delay:0.2,
-    ease: Expo.easeInOut,
+  tl.from(".hero-animate-fade",{
+    opacity:0,
+    y:50,
+    ease: Expo.ease,
   });
 
   tl.from(".hero-button",{
     opacity:0,
-    delay:0.3,
+    delay:0.1,
     y:50,
     ease: "bounce.Out",
   });
 
   tl.from(".pagination-btn-fade-up",{
-    delay:0.4,
+    delay:0.15,
     opacity:1,
-    stagger:0.1,
+    stagger:0.2,
     y:50,
     ease: "bounce.Out",
   });
-
 })
 
 //  animation fade in 
@@ -198,7 +207,7 @@ const counterLeft = gsap.utils.toArray(".counter-animate-left");
 counterLeft.forEach((counter, i) =>{
   const anim = gsap.fromTo(counter, 
     { opacity: 0, x:-100},
-    {opacity:1, x:0}
+    {opacity:1, x:0, duration:1}
   );
   ScrollTrigger.create({
     trigger: counter,
@@ -215,7 +224,7 @@ const counterRight = gsap.utils.toArray(".counter-animate-right");
 counterRight.forEach((counter, i) =>{
   const anim = gsap.fromTo(counter, 
     { opacity: 0, x:100},
-    {opacity:1, x:0}
+    {opacity:1, x:0, duration:1}
   );
   ScrollTrigger.create({
     trigger: counter,
@@ -232,7 +241,7 @@ const leftSlide = gsap.utils.toArray(".slide-left");
 leftSlide.forEach((left, i) =>{
   const anim = gsap.fromTo(left, 
     { opacity: 0, x:-100},
-    { opacity: 1, x:0 }
+    { opacity: 1, x:0, duration:1}
   );
   ScrollTrigger.create({
     trigger: left,
@@ -247,7 +256,7 @@ const rightSlide = gsap.utils.toArray(".slide-right");
 rightSlide.forEach((right, i) =>{
   const anim = gsap.fromTo(right, 
     { opacity: 0, x:100},
-    { opacity: 1, x:0 }
+    { opacity: 1, x:0, duration:1}
   );
   ScrollTrigger.create({
     trigger: right,
@@ -262,7 +271,7 @@ const imgScale = gsap.utils.toArray(".img-scale");
 imgScale.forEach((img, i) =>{
   const anim = gsap.fromTo(img, 
     { opacity: 0, scale:0},
-    { opacity: 1, scale:1, duration:0.5}
+    { opacity: 1, scale:1, duration:1}
   );
   ScrollTrigger.create({
     trigger: img,
@@ -272,71 +281,82 @@ imgScale.forEach((img, i) =>{
     ease: Power4.ease,
   });
 })
+
 //====== Animation End ======
 
 //====== Counter start ======
-function visible(partial) {
-  var $t = partial,
-    $w = jQuery(window),
-    viewTop = $w.scrollTop(),
-    viewBottom = viewTop + $w.height(),
-    _top = $t.offset().top,
-    _bottom = _top + $t.height(),
-    compareTop = partial === true ? _bottom : _top,
-    compareBottom = partial === true ? _top : _bottom;
-
-  return (
-    compareBottom <= viewBottom && compareTop >= viewTop && $t.is(":visible")
-  );
-}
-
-$(window).scroll(function () {
-  if (visible($(".count-digit"))) {
-    if ($(".count-digit").hasClass("counter-loaded")) return;
-    $(".count-digit").addClass("counter-loaded");
-
-    $(".count-digit").each(function () {
-      if ($(this).html() == Math.floor($(this).html())) {
-        var $this = $(this);
-        jQuery({ Counter: 0 }).animate(
-          { Counter: $this.text() },
-          {
-            duration: 2000,
-            easing: "swing",
-            step: function () {
-              $this.text(Math.trunc(this.Counter) + 1);
-            },
-          }
-        );
-      } else {
-        var $this = $(this);
-        jQuery({ Counter: 0 }).animate(
-          { Counter: $this.text() },
-          {
-            duration: 2000,
-            easing: "swing",
-            step: function () {
-              $this.text(((this.Counter * 10) / 10).toFixed(1));
-            },
-          }
-        );
-      }
-    });
+const counter = document.querySelector(".counter");
+if(counter != null){
+  function visible(partial) {
+    var $t = partial,
+      $w = jQuery(window),
+      viewTop = $w.scrollTop(),
+      viewBottom = viewTop + $w.height(),
+      _top = $t.offset().top,
+      _bottom = _top + $t.height(),
+      compareTop = partial === true ? _bottom : _top,
+      compareBottom = partial === true ? _top : _bottom;
+  
+    return (
+      compareBottom <= viewBottom && compareTop >= viewTop && $t.is(":visible")
+    );
   }
-});
+  
+  $(window).scroll(function () {
+    if (visible($(".count-digit"))) {
+      if ($(".count-digit").hasClass("counter-loaded")) return;
+      $(".count-digit").addClass("counter-loaded");
+  
+      $(".count-digit").each(function () {
+        if ($(this).html() == Math.floor($(this).html())) {
+          var $this = $(this);
+          jQuery({ Counter: 0 }).animate(
+            { Counter: $this.text() },
+            {
+              duration: 2000,
+              easing: "swing",
+              step: function () {
+                $this.text(Math.trunc(this.Counter) + 1);
+              },
+            }
+          );
+        } else {
+          var $this = $(this);
+          jQuery({ Counter: 0 }).animate(
+            { Counter: $this.text() },
+            {
+              duration: 2000,
+              easing: "swing",
+              step: function () {
+                $this.text(((this.Counter * 10) / 10).toFixed(1));
+              },
+            }
+          );
+        }
+      });
+    }
+  });
+}
 //====== Counter end ======
 
 
-// const progress = document.querySelector(".steps__progres");
-// const circles = document.querySelectorAll(".steps__circle");
+const progress = document.querySelector(".steps__progres");
+const circles = document.querySelectorAll(".steps__circle");
+const tabs = document.querySelectorAll(".steps__item");
+const tabContent = document.querySelectorAll("#tab");
+
 // let currentIndex = 1;
-// circles.forEach((circle,i)=>{
-//   console.log(circle)
-//   circle.addEventListener("click",()=>{
-//     if(i < currentIndex){
-//       circle.classList.add("active")
-//     }else{
-//         circle.classList.remove("active")
-//     }
-//   })
-// })
+function openTab(evt,  id) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabContent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("steps__item");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace("active", "");
+  }
+  document.getElementById(id).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+

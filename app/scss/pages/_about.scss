@@ -32,6 +32,7 @@
 .revolution{
     padding-block: em(180);
     background-color: $clr-card;
+    // position: relative;
     @include breakpoint-lg{
         padding-block: em(200) em(250);
     }
@@ -40,13 +41,31 @@
 .timeline{
     position: relative;
     width: 100%;
-    height: 25vh;
-    &::after{
+    height: 50vh;
+    // overflow-x: scroll;
+    // overflow-y: hidden;
+    // white-space: nowrap;
+    // scroll-snap-type: x mandatory;
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     width: 2px;
+    //     height: 100%;
+    //     background-color:#bebebe;;
+    //     top: 0;
+    //     left: 25px;
+    //     @include breakpoint-md{
+    //         width: 100%;
+    //         height: 2px;
+    //         top: 300px;
+    //     }
+    // }
+    &::before{
         content: "";
         position: absolute;
-        width: 2px;
-        height: 100%;
-        background-color:#bebebe;;
+        // width: 2px;
+        // height: 100%;
+        background-color: #bebebe;
         top: 0;
         left: 25px;
         @include breakpoint-md{
@@ -55,6 +74,25 @@
             top: 300px;
         }
     }
+
+    // &__content--wrapper{
+    //     position: relative;
+    //     &::before{
+    //         content: "";
+    //         position: absolute;
+    //         width: 2px;
+    //         height: 100%;
+    //         background-color:#bebebe;;
+    //         top: 0;
+    //         left: 25px;
+    //         @include breakpoint-md{
+    //             width: 100%;
+    //             height: 2px;
+    //             top: 300px;
+    //         }
+    //     }
+    // }
+   
     &__wrapper{
         position: relative;
         &::after{
@@ -64,18 +102,30 @@
             height: 30px;
             background-color: $clr-white;
             border: 8px solid $clr-secondary;
-            top: 0;
-            border-radius: 50%;
+            top: 300px;
+            @include border-radius(50%);
             z-index: 1;
             @include breakpoint-md{
                left: 0;
                top: 285px;
             }
         }
+        // &::before{
+        //     content: "";
+        //     position: absolute;
+        //     width: 2px;
+        //     height: 100%;
+        //     background-color:#bebebe;;
+        //     top: 0;
+        //     left: 25px;
+        //     @include breakpoint-md{
+        //         width: 100%;
+        //         height: 2px;
+        //         top: 300px;
+        //     }
+        // }
     }
     &__content{
-        // max-width: 70%;
-        // width: rem(280);
         max-width: 100%;
         padding: em(16) em(32);
         background-color: $clr-white;
@@ -93,3 +143,22 @@
         }
     }
 }
+
+
+
+.progress{
+    background-color: blue;
+    position: absolute;
+    // top: 50%;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    bottom: 66px;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition:all 0.4s ease;
+}
+
+// .swiper-slide{
+//     height: 0 !important;
+// }

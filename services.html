@@ -60,7 +60,7 @@
         </div>
         <!-- Mobile Menu end -->
     </header>
-    <main>
+    <main class="main">
         <!-- hero start -->
         <section class="hero hero--about">
             <div class="page-container">
@@ -94,15 +94,15 @@
                         <a href="#" class="btn btn--primary mt--2 mt--lg-4 animate-fade-in-up">Learn More</a>
                     </div>
                     <div class="col-12 col-lg-5 offset-lg-2">
-                        <figure class="">
-                            <img src="./app/assets/img/vocational-apprentice.webp" alt="" class="img-fluid img-animate-right">
+                        <figure class="slide-right">
+                            <img src="./app/assets/img/vocational-apprentice.webp" alt="" class="img-fluid">
                         </figure>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--10 mt--lg--23">
                     <div class="col-12 col-lg-5">
-                        <figure>
-                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid img-animate-left">
+                        <figure class="slide-left">
+                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid ">
                         </figure>
                     </div>
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 offset-lg-2">
@@ -126,15 +126,15 @@
                         <a class="#" class="btn btn--primary mt--2 mt--lg--4 animate-fade-in-up">Learn More</a>
                     </div>
                     <div class="col-12 col-lg-5 offset-lg-2">
-                        <figure>
-                            <img src="./app/assets/img/development-construction.webp" alt="" class="img-fluid img-animate-right">
+                        <figure class="slide-right">
+                            <img src="./app/assets/img/development-construction.webp" alt="" class="img-fluid">
                         </figure>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--15 mt--lg--25">
                     <div class="col-12 col-lg-5">
-                        <figure>
-                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid img-animate-left">
+                        <figure class="slide-left">
+                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid ">
                         </figure>
                     </div>
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 offset-lg-2">
@@ -165,19 +165,19 @@
                     <div class="col-12 col-lg-6">
                         <ul class="steps__list animate-fade-in-up">
                             <div class="steps__progress" id="steps__progress"></div>
-                            <li class="steps__item">
+                            <li class="steps__item" id ="tab1">
                                 <div class="steps__circle active"></div> 
                                 <h5 class="hero__heading text-capitalize steps__title active">
                                     Book An Appointment
                                 </h5>
                             </li>
-                            <li class="steps__item">
+                            <li class="steps__item " id ="tab2">
                                 <div class="steps__circle"></div> 
                                 <h5 class="hero__heading text-capitalize steps__title">
                                     Schedule A Call
                                 </h5>
                             </li>
-                            <li class="steps__item">
+                            <li class="steps__item" id ="tab3">
                                 <div class="steps__circle"></div> 
                                 <h5 class="hero__heading text-capitalize steps__title">
                                    Get Started
@@ -185,10 +185,34 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-12 col-lg-6 mt--3 mt--lg--0">
-                        <p class="slide-right">
-                            We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
-                        </p>
+                    <div class="col-12 col-lg-6 mt--3 mt--lg--0 tabs-content-container">
+                       <div class="row">
+                            <div class="col-12 tabContent" id ="1">
+                                <div class="tab-content">
+                                    <p class="animate-fade-in-up">
+                                       1. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 tabContent" id="2">
+                                <div class="tab-content">
+                                    <p class="animate-fade-in-up">
+                                        2. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 tabContent" id ="3">
+                                <div class="tab-content">
+                                    <p class="animate-fade-in-up">
+                                        3. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

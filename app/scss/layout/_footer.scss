@@ -78,14 +78,40 @@
         justify-content: center;
         padding: em(4);
         &:hover{
-             background: $clr-white;
+            background: $clr-white;
             @include transition(all, 0.4s, ease-in-out);
+
             svg{
                 @include transition(all, 0.4s, ease-in-out);
                 path{
                     fill:$clr-secondary;
                 }
             }
+
+            // &:nth-child(1){
+            //     svg{
+            //         @include transition(all, 0.4s, ease-in-out);
+            //         path{
+            //             fill:$clr-secondary;
+            //         }
+            //     }
+            // }
+            // &:nth-child(2){
+            //     svg{
+            //         @include transition(all, 0.4s, ease-in-out);
+            //         path{
+            //             fill:$clr-twiiter;
+            //         }
+            //     }
+            // }
+            // &:nth-child(3){
+            //     svg{
+            //         @include transition(all, 0.4s, ease-in-out);
+            //         path{
+            //             fill:$clr-instagram;
+            //         }
+            //     }
+            // }
         }
     }
 }
