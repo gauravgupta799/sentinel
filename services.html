@@ -95,14 +95,14 @@
                     </div>
                     <div class="col-12 col-lg-5 offset-lg-2">
                         <figure class="slide-right">
-                            <img src="./app/assets/img/vocational-apprentice.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/vocational-apprentice.webp" alt="" class="img-fluid" loading="lazy">
                         </figure>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--10 mt--lg--23">
                     <div class="col-12 col-lg-5">
                         <figure class="slide-left">
-                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid ">
+                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid" loading="lazy">
                         </figure>
                     </div>
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 offset-lg-2">
@@ -127,14 +127,14 @@
                     </div>
                     <div class="col-12 col-lg-5 offset-lg-2">
                         <figure class="slide-right">
-                            <img src="./app/assets/img/development-construction.webp" alt="" class="img-fluid">
+                            <img src="./app/assets/img/development-construction.webp" alt="" class="img-fluid" loading="lazy">
                         </figure>
                     </div>
                 </div>
                 <div class="row mt--5 mt--md--15 mt--lg--25">
                     <div class="col-12 col-lg-5">
                         <figure class="slide-left">
-                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid ">
+                            <img src="./app/assets/img/qfi-management.webp" alt="" class="img-fluid " loading="lazy">
                         </figure>
                     </div>
                     <div class="col-12 col-lg-5 py--1 py--md--3 py--lg--6 offset-lg-2">
@@ -161,57 +161,72 @@
                         </h3>
                     </div>
                 </div>
-                <div class="row mt--3 mt--md--6 mt--lg--12">
-                    <div class="col-12 col-lg-6">
-                        <ul class="steps__list animate-fade-in-up">
-                            <div class="steps__progress" id="steps__progress"></div>
-                            <li class="steps__item" id ="tab1">
-                                <div class="steps__circle active"></div> 
-                                <h5 class="hero__heading text-capitalize steps__title active">
-                                    Book An Appointment
-                                </h5>
-                            </li>
-                            <li class="steps__item " id ="tab2">
-                                <div class="steps__circle"></div> 
-                                <h5 class="hero__heading text-capitalize steps__title">
-                                    Schedule A Call
-                                </h5>
-                            </li>
-                            <li class="steps__item" id ="tab3">
-                                <div class="steps__circle"></div> 
-                                <h5 class="hero__heading text-capitalize steps__title">
-                                   Get Started
-                                </h5>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-lg-6 mt--3 mt--lg--0 tabs-content-container">
-                       <div class="row">
-                            <div class="col-12 tabContent" id ="1">
-                                <div class="tab-content">
-                                    <p class="animate-fade-in-up">
-                                       1. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
-                                    </p>
-                                </div>
-                            </div>
+                <div class="steps__container mt--3 mt--md--6 mt--lg--12">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            <ul class="steps__list animate-fade-in-up">
+                                <div class="steps__progress" id="steps__progress"></div>
+                                <a href="#book-an-appoinment" class="steps__item" id ="tab1">
+                                    <div class="steps__circle steps__circle-1 active"></div> 
+                                    <h5 class="hero__heading text-capitalize steps__title active">
+                                        Book An Appointment
+                                    </h5>
+                                </a>
+                                <a href="#schedule-a-call" class="steps__item " id ="tab2">
+                                    <div class="steps__circle steps__circle-2"></div> 
+                                    <h5 class="hero__heading text-capitalize steps__title">
+                                        Schedule A Call
+                                    </h5>
+                                </a>
+                                <a href="#get-started" class="steps__item" id ="tab3">
+                                    <div class="steps__circle steps__circle-3"></div> 
+                                    <h5 class="hero__heading text-capitalize steps__title">
+                                       Get Started
+                                    </h5>
+                                </a>
+                            </ul>
                         </div>
-                        <div class="row">
-                            <div class="col-12 tabContent" id="2">
-                                <div class="tab-content">
-                                    <p class="animate-fade-in-up">
-                                        2. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
-                                    </p>
+                        <div class="col-12 col-lg-6 mt--3 mt--lg--0 tabs-content-container">
+                             <div class="steps__main-content">
+                                 <section class="steps__inner active" id="book-an-appoinment">
+                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore dignissimos velit debitis. Vitae molestias illum modi repellat, tempore iusto sapiente inventore architecto atque ea debitis, non quam asperiores perferendis optio?</p>
+                                  </section>
+                                  <section class="steps__inner" id="schedule-a-call">
+                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore dignissimos velit debitis. Vitae molestias illum modi repellat, tempore iusto sapiente inventore architecto atque ea debitis, non quam asperiores perferendis optio?</p>
+                                  </section>
+                                  <section class="steps__inner" id="get-started">
+                                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore dignissimos velit debitis. Vitae molestias illum modi repellat, tempore iusto sapiente inventore architecto atque ea debitis, non quam asperiores perferendis optio?</p>
+                                  </section>
+
+                             </div>
+                          
+                            <!-- <div class="row">
+                                <div class="col-12 tabContent" id ="1">
+                                    <div class="tab-content">
+                                        <p class="animate-fade-in-up">
+                                           1. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 tabContent" id ="3">
-                                <div class="tab-content">
-                                    <p class="animate-fade-in-up">
-                                        3. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
-                                    </p>
+                            <div class="row">
+                                <div class="col-12 tabContent" id="2">
+                                    <div class="tab-content">
+                                        <p class="animate-fade-in-up">
+                                            2. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-12 tabContent" id ="3">
+                                    <div class="tab-content">
+                                        <p class="animate-fade-in-up">
+                                            3. We are a multifaceted property development firm with prowess in Technology, Electric, Training, Property Management, and Construction and Development Services.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -219,6 +234,7 @@
         </section>
         <!-- Steps section end -->
 
+        
         <!-- add value start -->
         <section class="add-value">
             <div class="page-container">
@@ -342,6 +358,7 @@
         </div>
     </footer>
     <!-- footer end -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
     <script src="./dist/bundle.min.js"></script>
 </body>
 </html>

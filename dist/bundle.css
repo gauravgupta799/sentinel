@@ -14429,24 +14429,35 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   }
 }
 
-.slide-brands {
+.sliding-right,
+.sliding-left {
   width: 100%;
-  position: relative;
   overflow: hidden;
-}
-
-.slide-img {
-  width: inherit;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
-  transition: all 0.5s ease;
-  animation: scroll 20s linear infinite;
-  -webkit-animation: scroll 20s linear infinite forwards;
 }
 
-@keyframes scroll {
+.sliding-right figure {
+  animation: slideAnimation-right 10s linear infinite;
+  backface-visibility: hidden;
+}
+
+@keyframes slideAnimation-right {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.sliding-left figure {
+  animation: slideAnimation-left 10s linear infinite;
+  backface-visibility: hidden;
+}
+
+@keyframes slideAnimation-left {
   0% {
     transform: translateX(0%);
   }
@@ -14711,6 +14722,11 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
     padding-block: 14.6875em 19.375em;
   }
 }
+.steps__container {
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;
+}
 .steps__list {
   display: flex;
   flex-direction: column;
@@ -14738,10 +14754,9 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   width: 3px;
   height: 0%;
   z-index: -1;
-  transition: all 0.4s ease;
-}
-.steps__progress.active {
-  height: 100%;
+  transition: all 0.5s ease;
+  animation: line 3s linear infinite;
+  -webkit-animation: line 3s linear infinite;
 }
 .steps__item {
   display: flex;
@@ -14782,20 +14797,36 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
 .steps__title.active {
   opacity: 1;
 }
-
-.tabs-content-container {
-  overflow: hidden;
+.steps__inner {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
+@keyframes line {
+  0% {
+    height: 0%;
+  }
+  50% {
+    height: 50%;
+  }
+  100% {
+    height: 100%;
+  }
+}
 .budget-btn-wrapper {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
+.contact-details__link {
+  transition: all 0.5s ease;
+}
 .contact-details__link:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-color: #192544;
+  -moz-text-decoration-color: #192544;
 }
 
 .nav {

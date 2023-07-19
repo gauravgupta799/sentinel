@@ -12,6 +12,12 @@
     @include breakpoint-lg{
         padding-block: em(235) em(310);
     }
+    &__container{
+        position: sticky;
+        top: 0;
+        position: -webkit-sticky; 
+
+    }
     &__list{
         display: flex;
         flex-direction: column;
@@ -21,6 +27,7 @@
         min-height: 100%;
         height:rem(400);
         z-index: 1;
+
         &::before{
             content:"";
             background-color: #707070;
@@ -39,11 +46,10 @@
         width: 3px;
         height: 0%;
         z-index: -1;
-        transition:all 0.4s ease;
-
-        &.active{
-            height: 100%;
-        }
+        @include transition(all,0.5s,ease);
+        animation: line 3s linear infinite;
+        -webkit-animation: line 3s linear infinite;
+        // animation-direction: alternate;
     }
     &__item{
         @include flex-center-vertical;
@@ -73,36 +79,33 @@
                 @include border-radius(50%);
                 background-color: $clr-secondary;    
             }
-        } 
-    }
-    &__title{
-        opacity: 0.6;
-
-        &.active{
-          opacity: 1;
         }
     }
+    &__title{
+         opacity: 0.6;
+
+         &.active{
+            opacity: 1;
+         }
+
+    }
+    &__inner{
+        padding-top:rem(16);
+        padding-bottom:rem(16);
+    }
+}
+
+@keyframes line{
+    0%{
+        height: 0%;
+    }
+    50%{
+        height: 50%;
+    }
+    100%{
+        height: 100%;
+    }
 }
 
 
-.tabs-content-container{
-    // height: 120px;
-    // height: 20vh;
-    // min-height:100%;
-    // border:1px solid red;
-    overflow: hidden;
-}
 
-
-
-
-
-
-
-// .step.step-active {
-//     color: $clr-secondary;
-// }
-
-// .step.step-active .circle {
-//     background-color:$clr-secondary;
-// }

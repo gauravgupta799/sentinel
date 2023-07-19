@@ -234,9 +234,7 @@
             img{
                 transform: scale(1.05) !important;
             }
-        }
-        
-        
+        } 
     }
 }
 
@@ -354,27 +352,40 @@
     }
 }
 
-.slide-brands{
+.sliding-right,
+.sliding-left{
     width: 100%;
-    position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 4rem;;
 }
-.slide-img{
-    width: inherit;
-    @include flex-center;
-    gap: rem(64);
-    @include transition(all, 0.5s, ease);
-    animation: scroll 20s linear infinite;
-    -webkit-animation: scroll 20s linear infinite forwards;
+  
+.sliding-right figure{
+    animation: slideAnimation-right 10s linear infinite;
+    backface-visibility: hidden;
 }
 
-@keyframes scroll{
-    0%{
+@keyframes slideAnimation-right {
+    0% {
         transform: translateX(0%);
     }
-    100%{
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.sliding-left figure{
+    animation: slideAnimation-left 10s linear infinite;
+    backface-visibility: hidden;
+}
+
+@keyframes slideAnimation-left {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
         transform: translateX(-100%);
     }
 }
-
-

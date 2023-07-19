@@ -340,23 +340,43 @@ if(counter != null){
 //====== Counter end ======
 
 
-const progress = document.querySelector(".steps__progres");
-const circles = document.querySelectorAll(".steps__circle");
-const tabs = document.querySelectorAll(".steps__item");
-const tabContent = document.querySelectorAll("#tab");
+// const progress = document.querySelector(".steps__progres");
+// const circles = document.querySelectorAll(".steps__circle");
+// const tabs = document.querySelectorAll(".steps__item");
+// const tabContent = document.querySelectorAll("#tab");
 
 // let currentIndex = 1;
-function openTab(evt,  id) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabContent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("steps__item");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
-  }
-  document.getElementById(id).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+// function openTab(evt,  id) {
+//   var i, tabcontent, tablinks;
+//   tabcontent = document.getElementsByClassName("tabContent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//   tablinks = document.getElementsByClassName("steps__item");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace("active", "");
+//   }
+//   document.getElementById(id).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
 
+
+// ==============================
+
+// const steps = document.querySelector(".steps");
+// var stepProgress = document.querySelector(".steps__progress");
+// var circles = document.querySelectorAll(".steps__circle");
+
+// function updateLineHeight(){
+//   var secHeight = steps.clientHeight;
+//   var secOffset = steps.offsetTop;
+//   var scrollPos = window.scrollY;
+//   if(scrollPos >= secOffset && scrollPos <= (secHeight + secOffset)) {
+//     // var scrollPercent = Math.floor(((scrollPos - secOffset) / secHeight) * 100);
+//     // stepProgress.style.height = `${scrollPercent}%`;
+//   }
+// }
+
+// window.addEventListener('scroll', function() {
+//   updateLineHeight();
+// });

@@ -14783,8 +14783,12 @@ p + p, h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
   opacity: 1;
 }
 
-.tabs-content-container {
+.tab-content {
+  height: 20vh;
+  border: 1px solid red;
   overflow: hidden;
+  position: sticky;
+  padding-bottom: 5rem;
 }
 
 .budget-btn-wrapper {
