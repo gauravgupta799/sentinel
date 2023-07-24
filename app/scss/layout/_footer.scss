@@ -16,10 +16,7 @@
         }
     }
     &__logo{
-        height: rem(45);
-        @include breakpoint-sm{
-            height: rem(48);
-        }
+        height: rem(48);
         @include breakpoint-md{
             height: rem(52);
         }

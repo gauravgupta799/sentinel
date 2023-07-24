@@ -70,7 +70,7 @@ var swiper3 = new Swiper(".swiper-container-3", {
 
 
 var swiper4 = new Swiper(".swiper-container-4", {
-  slidesPerView: 1,
+  slidesPerView: 1.3,
   spaceBetween: 10,
   grabCursor: true,
   pagination: {
@@ -78,17 +78,17 @@ var swiper4 = new Swiper(".swiper-container-4", {
     clickable: true,
   },
   breakpoints: {
-    548:{
-      slidesPerView: 1,
-    },
-    640: {
+    576: {
       slidesPerView: 2,
+      spaceBetween: 15,
     },
     768: {
       slidesPerView: 2.5,
+      spaceBetween: 20,
     },
     1024: {
       slidesPerView: 3.5,
+      spaceBetween: 30,
     },
   },
 });
@@ -339,44 +339,59 @@ if(counter != null){
 }
 //====== Counter end ======
 
-
-// const progress = document.querySelector(".steps__progres");
-// const circles = document.querySelectorAll(".steps__circle");
-// const tabs = document.querySelectorAll(".steps__item");
-// const tabContent = document.querySelectorAll("#tab");
-
-// let currentIndex = 1;
-// function openTab(evt,  id) {
-//   var i, tabcontent, tablinks;
-//   tabcontent = document.getElementsByClassName("tabContent");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
-//   }
-//   tablinks = document.getElementsByClassName("steps__item");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace("active", "");
-//   }
-//   document.getElementById(id).style.display = "block";
-//   evt.currentTarget.className += " active";
-// }
-
-
 // ==============================
+const steps = document.querySelector(".steps");
+var stepProgress = document.querySelector(".steps__progress");
+var circles = document.querySelectorAll(".steps__circle");
 
-// const steps = document.querySelector(".steps");
-// var stepProgress = document.querySelector(".steps__progress");
-// var circles = document.querySelectorAll(".steps__circle");
+function updateLineHeight(){
+  var secHeight = steps.clientHeight;
+  var secOffset = steps.offsetTop;
+  var scrollPos = window.scrollY;
+  if(scrollPos >= secOffset && scrollPos <= (secHeight + secOffset)) {
+    var scrollPercent = Math.floor(((scrollPos - secOffset) / secHeight) * 100);
+    stepProgress.style.height = `${scrollPercent}%`;
+  }
+}
 
-// function updateLineHeight(){
-//   var secHeight = steps.clientHeight;
-//   var secOffset = steps.offsetTop;
-//   var scrollPos = window.scrollY;
-//   if(scrollPos >= secOffset && scrollPos <= (secHeight + secOffset)) {
-//     // var scrollPercent = Math.floor(((scrollPos - secOffset) / secHeight) * 100);
-//     // stepProgress.style.height = `${scrollPercent}%`;
-//   }
-// }
+window.addEventListener('scroll', function() {
+  updateLineHeight();
+});
 
-// window.addEventListener('scroll', function() {
-//   updateLineHeight();
-// });
+
+// =========== sticky process =================
+window.addEventListener("load", () => {
+  const sections = Array.from(document.querySelectorAll(".steps__inner"));
+  // const circles = Array.from(document.querySelectorAll('.steps__circle'))
+
+  // Once a scrolling event is detected, iterate all elements
+  const scrollHandler = (entries) =>{
+    entries.forEach(entry => {
+      const section = entry.target;
+      const sectionPara = entry.target.children[0];
+      const sectionId = section.id; 
+      const sectionLink = document.querySelector(`.steps__list li a[href="#${sectionId}"]`);
+   
+
+      const progessBar = document.querySelector(`.steps__list .steps__progress`)
+      console.log("bar", progessBar )
+      
+      if (entry.intersectionRatio > 0) {
+        // section.classList.add("visible");
+        sectionPara.classList.add("visible");
+        sectionLink.children[0].classList.add("visible");
+        sectionLink.children[1].classList.add("visible")
+      } else {
+        // section.classList.remove("visible");
+        sectionPara.classList.remove("visible");
+        sectionLink.children[0].classList.remove("visible");
+        sectionLink.children[1].classList.remove("visible")
+      }
+    });
+  }
+
+  // Creates a new scroll observer
+  const observer = new IntersectionObserver(scrollHandler);
+ 
+  sections.forEach(section => observer.observe(section));
+});

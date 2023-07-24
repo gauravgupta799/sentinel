@@ -363,8 +363,9 @@
 }
   
 .sliding-right figure{
-    animation: slideAnimation-right 10s linear infinite;
+    animation: slideAnimation-right 20s linear infinite;
     backface-visibility: hidden;
+    -webkit-animation: slideAnimation-right 20s linear infinite;
 }
 
 @keyframes slideAnimation-right {

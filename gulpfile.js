@@ -11,6 +11,7 @@ const browsersync = require('browser-sync').create();
 const cssFiles = [
     'app/scss/main.scss',
     'app/venders/swiper/css/swiper.css',
+    'app/venders/locomotive-scroll/locomotive-scroll.min.css'
 ];
 
 // sass task for styles css
@@ -38,6 +39,7 @@ const jsFilesArray = [
     "app/venders/gsap/gsap.min.js",
     "app/venders/gsap/ScrollTrigger.min.js",
     "app/venders/swiper/js/swiper-bundle.min.js",
+    'app/venders/locomotive-scroll/locomotive-scroll.min.js',
     "app/js/main.js",
 ]
 

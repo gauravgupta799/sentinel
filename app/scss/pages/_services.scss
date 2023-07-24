@@ -12,11 +12,24 @@
     @include breakpoint-lg{
         padding-block: em(235) em(310);
     }
-    &__container{
+    &__container--desktop{
+        display: none;
+        @include breakpoint-lg{
+            display: block;
+        }
+    }
+    &__container--mobile{
+        display: block;
+        @include breakpoint-lg{
+            display: none;
+        }
+    }
+    &__list-container{
         position: sticky;
-        top: 0;
-        position: -webkit-sticky; 
-
+        top: 5%;
+        @include breakpoint-lg{
+            top: 15%;
+        }
     }
     &__list{
         display: flex;
@@ -27,7 +40,6 @@
         min-height: 100%;
         height:rem(400);
         z-index: 1;
-
         &::before{
             content:"";
             background-color: #707070;
@@ -47,9 +59,16 @@
         height: 0%;
         z-index: -1;
         @include transition(all,0.5s,ease);
-        animation: line 3s linear infinite;
-        -webkit-animation: line 3s linear infinite;
-        // animation-direction: alternate;
+
+        &.visible{
+            height: 0%;
+        }
+        &.visible-50{
+            height: 50%;
+        }
+        &.visible-100{
+            height: 100%;
+        }
     }
     &__item{
         @include flex-center-vertical;
@@ -67,7 +86,9 @@
         @include flex-center;
         cursor: pointer;
         &:nth-of-type(1){
-            margin-top: -2px;
+            @include breakpoint-lg{
+                margin-top: 0;
+            }
         }
         &.active{
             border-color: $clr-secondary;
@@ -80,6 +101,19 @@
                 background-color: $clr-secondary;    
             }
         }
+        &.visible{
+            border-color: $clr-secondary;
+            @include transition(all,0.5s,ease);
+            &::after{
+                content:"";
+                position: absolute;
+                width: rem(26);
+                height: rem(26);
+                @include border-radius(50%);
+                background-color: $clr-secondary; 
+                @include transition(all,0.5s,ease);   
+            }
+        }
     }
     &__title{
          opacity: 0.6;
@@ -88,24 +122,35 @@
             opacity: 1;
          }
 
+         &.visible{
+            opacity: 1;
+         }
     }
     &__inner{
-        padding-top:rem(16);
-        padding-bottom:rem(16);
+        padding-bottom: em(100);
+
+        @include breakpoint-sm{
+            padding-bottom: em(150);
+        }
+        @include breakpoint-md{
+            padding-bottom: em(400);
+        }
+        // @include breakpoint-lg{
+        //     padding-bottom: em(350);
+        // }
+        @include breakpoint-xl{
+            padding-bottom: em(400);
+        }
+        &:nth-child(3){
+            padding-bottom: 0;
+        }
+        p{
+            opacity: 0.6;
+            &.visible{
+                opacity: 1;
+                @include transition(all, 0.6s, ease);
+            }
+        }
     }
 }
-
-@keyframes line{
-    0%{
-        height: 0%;
-    }
-    50%{
-        height: 50%;
-    }
-    100%{
-        height: 100%;
-    }
-}
-
-
 
